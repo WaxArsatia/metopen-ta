@@ -32,6 +32,38 @@ Agen hanya membaca `SKILL.md` lebih dulu, lalu satu atau dua berkas `references/
 
 ## Pasang
 
+### Dengan `npx skills` (CLI [vercel-labs/skills](https://github.com/vercel-labs/skills))
+
+Pasang ke proyek yang sedang dibuka (cakupan bawaan):
+
+```bash
+npx skills add WaxArsatia/metopen-ta
+```
+
+Pasang untuk semua proyek (folder pengguna) di Claude Code, tanpa pertanyaan:
+
+```bash
+npx skills add WaxArsatia/metopen-ta -g -a claude-code -y
+```
+
+Opsi yang berguna:
+
+| Opsi | Fungsi |
+|---|---|
+| `-g`, `--global` | Pasang ke folder pengguna, bukan ke proyek |
+| `-a`, `--agent <agen>` | Pilih agen tujuan, misalnya `claude-code` atau `codex` |
+| `-l`, `--list` | Tampilkan skill yang tersedia di repo tanpa memasang |
+| `--copy` | Salin berkas, bukan symlink (untuk sistem yang tidak mendukung symlink) |
+| `-y`, `--yes` | Lewati semua konfirmasi |
+
+Catatan:
+- Pakai bentuk `WaxArsatia/metopen-ta` atau URL repo GitHub. Jangan memakai tautan langsung ke `SKILL.md` mentah, karena bentuk itu hanya memasang `SKILL.md` dan folder `references/` tidak ikut.
+- Pemasangan menyalin seluruh folder skill, termasuk `references/` dan `slides/` (sekitar 31 MB).
+- CLI itu mengirim data penggunaan anonim. Matikan dengan `DISABLE_TELEMETRY=1` atau `DO_NOT_TRACK=1`.
+- Detail opsi lengkap ada di [dokumentasi `skills add`](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
+
+### Dengan `git clone`
+
 Claude Code, per pengguna (berlaku di semua proyek):
 
 ```bash
