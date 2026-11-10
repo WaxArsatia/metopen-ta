@@ -1,0 +1,8 @@
+# Uji lokal (memuat contoh dan data proyek penyusun)
+evals/
+*-workspace/
+
+# Sistem
+.DS_Store
+Thumbs.db
+*.swp
