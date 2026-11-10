@@ -6,14 +6,15 @@ Skill agen AI berisi aturan metodologi penelitian dan tata tulis ilmiah dari mat
 
 ## Status dan hak cipta
 
-Isi berupa ringkasan parafrase dari slide dosen, bukan salinan. Slide sumber milik pengampu kelas dan Universitas Telkom. Repo ini ditujukan untuk pribadi dan teman sekelas yang memegang deck yang sama, sehingga tag bisa diverifikasi. Belum ada lisensi terbuka. Tambahkan `LICENSE` hanya setelah mendapat izin pengampu bila repo akan dibuka untuk publik. Lihat `NOTICE.md`.
+Isi `references/` berupa ringkasan parafrase dari slide dosen. Salinan slide aslinya disertakan di `slides/` agar tag sumber bisa diperiksa di mesin mana pun tanpa memindahkan berkas terpisah. Slide itu milik pengampu kelas dan Universitas Telkom, jadi repo ini harus tetap privat atau hanya dibagikan ke teman sekelas. Belum ada lisensi terbuka. Jangan membuka repo untuk publik tanpa izin pengampu. Lihat `NOTICE.md`.
 
 ## Isi
 
 ```
 metopen-ta/
 ├── SKILL.md              pintu masuk: urutan otoritas dan tabel "kerjakan X, baca Y"
-├── SUMBER.md             pemetaan kode deck (W01 sampai W13) ke topik dan berkas
+├── SUMBER.md             pemetaan kode deck (W01 sampai W13) ke berkas, topik, dan cara memeriksa tag
+├── slides/               salinan slide asli (12 berkas, sekitar 31 MB)
 ├── references/           8 berkas topik, dimuat sesuai kebutuhan
 │   ├── struktur-isi.md
 │   ├── judul-abstrak.md
@@ -27,7 +28,7 @@ metopen-ta/
 └── README.md             berkas ini (tidak dimuat agen)
 ```
 
-Agen hanya membaca `SKILL.md` lebih dulu, lalu satu atau dua berkas `references/` sesuai bagian yang dikerjakan.
+Agen hanya membaca `SKILL.md` lebih dulu, lalu satu atau dua berkas `references/` sesuai bagian yang dikerjakan. Folder `slides/` hanya dibuka saat sebuah tag perlu diperiksa.
 
 ## Pasang
 
@@ -67,3 +68,4 @@ Keputusan proyek (menang atas slide):
 - Ringkasan bergantung pada ekstraksi teks dan pembacaan visual slide bergambar. Cocokkan dengan slide asli sebelum menjadikan aturan sebagai dasar keputusan penting.
 - Slide mengacu ke Template Laporan TA untuk laporan akhir. Untuk proposal, templat proposal fakultas dan aturan proyek Anda lebih tinggi derajatnya.
 - Skill tidak menjalankan pemeriksaan kemiripan (plagiarisme) dan tidak mengecek indeks jurnal.
+- Clone pertama mengunduh sekitar 31 MB karena memuat slide. Memeriksa slide bergambar butuh LibreOffice dan `pdftoppm` (lihat `SUMBER.md`).
