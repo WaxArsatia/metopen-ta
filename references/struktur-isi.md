@@ -1,6 +1,6 @@
 # Struktur dan isi proposal dan laporan TA
 Struktur dan isi proposal vs laporan TA: apa yang wajib ada, apa yang sudah dikunci saat proposal, apa yang baru final di laporan; juga research question dan hipotesis.
-Sumber: W01 (s4-11, s16-24, s47-55) dan W02 (s4-24); W01 s49-55 (tabel komponen di s51-55) dan W02 s18, s20, s22 hanya terbaca dari gambar.
+Sumber: W01 (s4-11, s16-24, s47-55) dan W02 (s4-24); tabel komponen di W01 s51-55 dan W02 s18, s20, s22 hanya terbaca dari gambar.
 
 ## Hakikat TA dan proposal
 

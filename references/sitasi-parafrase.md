@@ -1,6 +1,6 @@
 # Sitasi dan parafrase
 Aturan jenis publikasi ilmiah, cara sitasi dan format referensi (IEEE, APA), serta parafrase etis untuk menghindari plagiarisme.
-Sumber: deck W05 slide 31-68 (slide 35, 37, 44, 45, 51 dibaca dari gambar) dan deck W11 slide 1-13.
+Sumber: deck W05 slide 31-68 (slide 35, 44, 45, 51 dibaca dari gambar) dan deck W11 slide 1-13.
 
 ## Definisi dan jenis publikasi ilmiah
 - Publikasi ilmiah adalah karya tulis yang memaparkan hasil penelitian, kajian, atau review dalam bidang ilmu tertentu. Tujuan utama: menyebarkan hasil penelitian ke komunitas ilmiah dan publik. [W05 s31]
