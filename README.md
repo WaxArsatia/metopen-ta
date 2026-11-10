@@ -6,7 +6,7 @@ Skill agen AI berisi aturan metodologi penelitian dan tata tulis ilmiah dari mat
 
 ## Status dan hak cipta
 
-Isi `references/` berupa ringkasan parafrase dari slide dosen. Salinan slide aslinya disertakan di `slides/` agar tag sumber bisa diperiksa di mesin mana pun tanpa memindahkan berkas terpisah. Slide itu milik pengampu kelas dan Universitas Telkom, jadi repo ini harus tetap privat atau hanya dibagikan ke teman sekelas. Belum ada lisensi terbuka. Jangan membuka repo untuk publik tanpa izin pengampu. Lihat `NOTICE.md`.
+Isi `references/` berupa ringkasan parafrase dari slide dosen. Salinan slide aslinya disertakan di `slides/` agar tag sumber bisa diperiksa di mesin mana pun tanpa memindahkan berkas terpisah. Slide itu milik pengampu kelas dan Universitas Telkom, dan penyusun repo telah memperoleh izin untuk membagikannya. Repo ini belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Lihat `NOTICE.md`.
 
 ## Isi
 
@@ -35,13 +35,13 @@ Agen hanya membaca `SKILL.md` lebih dulu, lalu satu atau dua berkas `references/
 Claude Code, per pengguna (berlaku di semua proyek):
 
 ```bash
-git clone <URL-REPO> ~/.claude/skills/metopen-ta
+git clone https://github.com/WaxArsatia/metopen-ta.git ~/.claude/skills/metopen-ta
 ```
 
 Claude Code, per proyek:
 
 ```bash
-git clone <URL-REPO> <proyek-anda>/.claude/skills/metopen-ta
+git clone https://github.com/WaxArsatia/metopen-ta.git <proyek-anda>/.claude/skills/metopen-ta
 ```
 
 Perbarui dengan `git pull` di folder itu.
