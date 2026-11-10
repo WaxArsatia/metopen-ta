@@ -19,7 +19,7 @@ Tag seperti `[W06 s15]` berarti deck W06, slide 15. Nomor slide sama dengan nomo
 | W13 | `W13 - Slide dan Presentasi.pptx` | `references/presentasi-sidang.md` |
 | Tips | `Tips Mengerjakan Tugas Akhir - by KIF.pptx` | `references/checklist-editing.md` |
 
-Slide yang isinya berupa gambar (tabel, checklist, diagram) ditandai `(gambar)` di referensi, karena hanya terbaca dari render slide dan tidak muncul pada ekstraksi teks.
+Slide yang isinya berupa gambar (tabel, checklist, diagram) didaftar di baris "Sumber" pada kepala tiap berkas referensi, karena hanya terbaca dari render slide dan tidak muncul pada ekstraksi teks.
 
 ## Memeriksa sebuah tag
 
@@ -31,7 +31,7 @@ Teks slide dari `.pptx` (contoh W06 slide 15):
 unzip -p "slides/W06 - Pendahuluan.pptx" ppt/slides/slide15.xml | grep -o '<a:t>[^<]*</a:t>' | sed 's/<[^>]*>//g' | paste -sd' '
 ```
 
-Gambar slide (contoh W12 slide 7, untuk tag `(gambar)`). Butuh LibreOffice dan `pdftoppm` (paket poppler):
+Gambar slide (contoh W12 slide 7, untuk slide bergambar). Butuh LibreOffice dan `pdftoppm` (paket poppler):
 
 ```bash
 mkdir -p /tmp/metopen

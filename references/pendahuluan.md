@@ -13,7 +13,7 @@ Sumber: deck W06 (slide 4-5, 7, 9-18, 20-21, 23, 25, 27-28). Slide 11 dan 28 dib
 ## Latar Belakang
 - Kembangkan lebih detail apa yang sudah ada di abstrak tentang dua hal: (1) mengapa topik menarik dan/atau penting dikerjakan; (2) kekurangan kondisi saat ini untuk topik itu, yaitu gap/kesenjangan antara kondisi saat ini dan kondisi yang diharapkan. [W06 s7]
 - Jika judul menyebut pendekatan/metode/algoritma tertentu, jelaskan singkat alasan pemilihannya. [W06 s7]
-- Struktur contoh Pendahuluan (3 paragraf), sebagai pola, bukan aturan wajib: [W06 s28] (gambar)
+- Struktur contoh Pendahuluan (3 paragraf), sebagai pola, bukan aturan wajib: [W06 s28]
   - Par 1: latar belakang dan apa topiknya; penjelasan topik disertai gambar contoh kasus.
   - Par 2: mengapa topik menarik, plus kelemahan pendekatan yang ada saat ini.
   - Par 3: metode yang diusulkan (*proposed method*) secara singkat, plus kontribusi utama secara jelas.
@@ -29,7 +29,7 @@ Sumber: deck W06 (slide 4-5, 7, 9-18, 20-21, 23, 25, 27-28). Slide 11 dan 28 dib
 - Cara mudah menyusunnya: jelaskan kata-kata kunci pada abstrak dan judul, agar topik jelas bagi pembaca. [W06 s10]
 
 ### Input dan output
-- Sub-bagian ini menjelaskan apa input dan output (jika digambarkan sebagai algoritma, ia memuat Input dan Output algoritma tersebut). [W06 s11] (gambar)
+- Sub-bagian ini menjelaskan apa input dan output (jika digambarkan sebagai algoritma, ia memuat Input dan Output algoritma tersebut). [W06 s11]
 - Sangat dianjurkan menerangkan input, output, dan satu contoh kasus yang sangat singkat. [W06 s12]
 
 ### Batasan: definisi dan fungsi

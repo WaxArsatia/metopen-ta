@@ -13,84 +13,84 @@ Sumber: W12 (s4-9; s7-9 berupa gambar, ditranskripsi utuh) dan Tips (s2-10; s1 d
 ### 1. Format dan konsistensi
 
 Penulisan umum:
-- [ ] Font sesuai template kampus [W12 s7] (gambar)
-- [ ] Ukuran font konsisten [W12 s7] (gambar)
-- [ ] Spasi konsisten [W12 s7] (gambar)
-- [ ] Margin sesuai aturan [W12 s7] (gambar)
-- [ ] Penomoran halaman benar [W12 s7] (gambar)
-- [ ] Heading/subbab konsisten [W12 s7] (gambar)
+- [ ] Font sesuai template kampus [W12 s7]
+- [ ] Ukuran font konsisten [W12 s7]
+- [ ] Spasi konsisten [W12 s7]
+- [ ] Margin sesuai aturan [W12 s7]
+- [ ] Penomoran halaman benar [W12 s7]
+- [ ] Heading/subbab konsisten [W12 s7]
 
 Konsistensi istilah:
-- [ ] Istilah tidak berubah-ubah (contoh slide: "website", jangan kadang "web site") [W12 s7] (gambar)
-- [ ] Nama sistem konsisten [W12 s7] (gambar)
-- [ ] Penulisan singkatan konsisten [W12 s7] (gambar)
+- [ ] Istilah tidak berubah-ubah (contoh slide: "website", jangan kadang "web site") [W12 s7]
+- [ ] Nama sistem konsisten [W12 s7]
+- [ ] Penulisan singkatan konsisten [W12 s7]
 
 ### 2. Bab I, Pendahuluan
 
-- [ ] Latar belakang mengerucut ke masalah [W12 s7] (gambar)
-- [ ] Ada data/fakta pendukung [W12 s7] (gambar)
-- [ ] Rumusan masalah jelas [W12 s7] (gambar)
-- [ ] Tujuan sesuai rumusan masalah [W12 s7] (gambar)
-- [ ] Manfaat penelitian relevan [W12 s7] (gambar)
-- [ ] Batasan masalah jelas [W12 s7] (gambar)
+- [ ] Latar belakang mengerucut ke masalah [W12 s7]
+- [ ] Ada data/fakta pendukung [W12 s7]
+- [ ] Rumusan masalah jelas [W12 s7]
+- [ ] Tujuan sesuai rumusan masalah [W12 s7]
+- [ ] Manfaat penelitian relevan [W12 s7]
+- [ ] Batasan masalah jelas [W12 s7]
 
 ### 3. Bab II, Kajian Pustaka
 
-- [ ] Semua teori ada sumbernya [W12 s7] (gambar)
-- [ ] Sitasi konsisten [W12 s7] (gambar)
-- [ ] Ada penelitian terdahulu [W12 s7] (gambar)
-- [ ] Ada gap penelitian [W12 s7] (gambar)
-- [ ] Kerangka pemikiran jelas [W12 s7] (gambar)
-- [ ] Referensi cukup dan terbaru [W12 s7] (gambar)
+- [ ] Semua teori ada sumbernya [W12 s7]
+- [ ] Sitasi konsisten [W12 s7]
+- [ ] Ada penelitian terdahulu [W12 s7]
+- [ ] Ada gap penelitian [W12 s7]
+- [ ] Kerangka pemikiran jelas [W12 s7]
+- [ ] Referensi cukup dan terbaru [W12 s7]
 
 ### 4. Bab III, Metodologi
 
-- [ ] Metode penelitian jelas [W12 s8] (gambar)
-- [ ] Tahapan penelitian runtut [W12 s8] (gambar)
-- [ ] Diagram/alur penelitian ada [W12 s8] (gambar)
-- [ ] Tools/software disebutkan [W12 s8] (gambar)
-- [ ] Teknik pengumpulan data dijelaskan [W12 s8] (gambar)
-- [ ] Pengujian dijelaskan [W12 s8] (gambar)
+- [ ] Metode penelitian jelas [W12 s8]
+- [ ] Tahapan penelitian runtut [W12 s8]
+- [ ] Diagram/alur penelitian ada [W12 s8]
+- [ ] Tools/software disebutkan [W12 s8]
+- [ ] Teknik pengumpulan data dijelaskan [W12 s8]
+- [ ] Pengujian dijelaskan [W12 s8]
 
 ### 5. Bab IV, Hasil dan Pembahasan (laporan)
 
-- [ ] Ada hasil penelitian [W12 s8] (gambar)
-- [ ] Ada screenshot/tabel/grafik yang relevan [W12 s8] (gambar)
-- [ ] Ada pengujian [W12 s8] (gambar)
-- [ ] Ada analisis/pembahasan [W12 s8] (gambar)
-- [ ] Hasil menjawab tujuan penelitian [W12 s8] (gambar)
-- [ ] Tidak hanya tempel gambar tanpa penjelasan [W12 s8] (gambar)
+- [ ] Ada hasil penelitian [W12 s8]
+- [ ] Ada screenshot/tabel/grafik yang relevan [W12 s8]
+- [ ] Ada pengujian [W12 s8]
+- [ ] Ada analisis/pembahasan [W12 s8]
+- [ ] Hasil menjawab tujuan penelitian [W12 s8]
+- [ ] Tidak hanya tempel gambar tanpa penjelasan [W12 s8]
 
 ### 6. Bab V, Kesimpulan dan Saran (laporan)
 
-- [ ] Kesimpulan menjawab tujuan penelitian [W12 s8] (gambar)
-- [ ] Kesimpulan berdasarkan hasil penelitian [W12 s8] (gambar)
-- [ ] Tidak ada teori baru [W12 s8] (gambar)
-- [ ] Saran relevan dengan penelitian [W12 s8] (gambar)
+- [ ] Kesimpulan menjawab tujuan penelitian [W12 s8]
+- [ ] Kesimpulan berdasarkan hasil penelitian [W12 s8]
+- [ ] Tidak ada teori baru [W12 s8]
+- [ ] Saran relevan dengan penelitian [W12 s8]
 
 ### 7. Sitasi dan Daftar Pustaka
 
-- [ ] Semua sitasi muncul di daftar pustaka [W12 s8] (gambar)
-- [ ] Tidak ada pustaka yang tidak dikutip [W12 s8] (gambar)
-- [ ] Format konsisten (APA/IEEE/dll) [W12 s8] (gambar)
-- [ ] Tahun dan nama penulis benar [W12 s8] (gambar)
-- [ ] Link/DOI aktif (jika ada) [W12 s8] (gambar)
+- [ ] Semua sitasi muncul di daftar pustaka [W12 s8]
+- [ ] Tidak ada pustaka yang tidak dikutip [W12 s8]
+- [ ] Format konsisten (APA/IEEE/dll) [W12 s8]
+- [ ] Tahun dan nama penulis benar [W12 s8]
+- [ ] Link/DOI aktif (jika ada) [W12 s8]
 
 ### 8. Gambar, Tabel, dan Diagram
 
-- [ ] Semua gambar ada nomor dan judul [W12 s9] (gambar)
-- [ ] Semua tabel ada nomor dan judul [W12 s9] (gambar)
-- [ ] Dirujuk dalam pembahasan [W12 s9] (gambar)
-- [ ] Kualitas gambar jelas [W12 s9] (gambar)
-- [ ] Diagram mudah dibaca [W12 s9] (gambar)
+- [ ] Semua gambar ada nomor dan judul [W12 s9]
+- [ ] Semua tabel ada nomor dan judul [W12 s9]
+- [ ] Dirujuk dalam pembahasan [W12 s9]
+- [ ] Kualitas gambar jelas [W12 s9]
+- [ ] Diagram mudah dibaca [W12 s9]
 
 ### 9. Bahasa dan Penulisan
 
-- [ ] Tidak typo [W12 s9] (gambar)
-- [ ] Kalimat efektif [W12 s9] (gambar)
-- [ ] Tidak terlalu banyak copy-paste [W12 s9] (gambar)
-- [ ] Bahasa formal akademik [W12 s9] (gambar)
-- [ ] Tidak menggunakan bahasa lisan [W12 s9] (gambar)
+- [ ] Tidak typo [W12 s9]
+- [ ] Kalimat efektif [W12 s9]
+- [ ] Tidak terlalu banyak copy-paste [W12 s9]
+- [ ] Bahasa formal akademik [W12 s9]
+- [ ] Tidak menggunakan bahasa lisan [W12 s9]
 
 ## Format dokumen (dari Tips)
 

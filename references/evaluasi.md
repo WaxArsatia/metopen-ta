@@ -10,8 +10,8 @@ Sumber: deck W09 slide 4-6, 8-9, 11-17, 19-20, 22-23 (slide 14, 16, 20, 22, 23 d
 - Pengujian dan analisis harus selaras dengan tujuan yang dinyatakan di Pendahuluan. [W09 s5]
 - Tulis nama sub-bagian secara lengkap: "Analisis Hasil Pengujian", jangan disingkat "Analisis". Alasan: menghindari salah paham dengan analisis perancangan; terutama sebagai latihan penulisan hasil penelitian tingkat sarjana. [W09 s5]
 - Pada artikel berbahasa Inggris, analisis hasil pengujian sering diberi nama "Discussion". [W09 s6]
-- Contoh struktur artikel (Wang dkk., KDD 2020): bagian "Experiment Results" berisi sub-bagian Dataset, Implementation Details, Evaluation Metrics, Baselines, Results and Discussions. Empat sub-bagian pertama adalah pengantar evaluasi; "Results and Discussions" dibagi menjadi hasil pengujian dan analisis hasil pengujian. [W09 s22] (gambar)
-- Contoh pembagian "Results and Discussions": Performance Comparison (= hasil pengujian), lalu Impact of Multi-task Learning, Impact of Training Batch Size and Learning Rate, Parameter Sensitivity (= tiga poin analisis hasil pengujian, masing-masing pada kondisi yang dianggap penting untuk topik artikel). [W09 s23] (gambar)
+- Contoh struktur artikel (Wang dkk., KDD 2020): bagian "Experiment Results" berisi sub-bagian Dataset, Implementation Details, Evaluation Metrics, Baselines, Results and Discussions. Empat sub-bagian pertama adalah pengantar evaluasi; "Results and Discussions" dibagi menjadi hasil pengujian dan analisis hasil pengujian. [W09 s22]
+- Contoh pembagian "Results and Discussions": Performance Comparison (= hasil pengujian), lalu Impact of Multi-task Learning, Impact of Training Batch Size and Learning Rate, Parameter Sensitivity (= tiga poin analisis hasil pengujian, masing-masing pada kondisi yang dianggap penting untuk topik artikel). [W09 s23]
 
 ## Pengantar Evaluasi: data yang digunakan
 - Sebutkan dari mana dan bagaimana data diambil atau dibangun. [W09 s8]
@@ -38,16 +38,16 @@ Sumber: deck W09 slide 4-6, 8-9, 11-17, 19-20, 22-23 (slide 14, 16, 20, 22, 23 d
 - Tampilkan lebih dulu hasil pengujian yang paling utama, lalu hasil yang lebih detail. Tujuannya memudahkan pembaca. [W09 s11]
 - Hasil utama juga disampaikan di abstrak, boleh dengan cara berbeda (misalnya kualitatif). [W09 s11]
 - Hasil utama umumnya adalah hasil terbaik dari pengujian yang dilakukan, dibandingkan dengan pembanding. [W09 s12]
-- Tabel hasil utama menampilkan hasil terbaik; hasil lain dianalisis di Analisis Hasil Pengujian. [W09 s14] (gambar)
+- Tabel hasil utama menampilkan hasil terbaik; hasil lain dianalisis di Analisis Hasil Pengujian. [W09 s14]
 - Tuliskan kondisi atau pengaturan (antara lain parameter) yang menghasilkan hasil terbaik dengan sistem yang diuji. [W09 s17]
 - Setiap gambar dan tabel, termasuk hasil utama, diterangkan dalam teks. [W09 s17]
 
 ## Hasil Pengujian: format tabel
-- Bentuk tabel utama: baris = sistem atau pembanding (termasuk penelitian sendiri), kolom = metrik (contoh: Precision, Recall, F1, E%; atau MAP, P, R, F1, Acc, satuan %). [W09 s14, s16] (gambar)
+- Bentuk tabel utama: baris = sistem atau pembanding (termasuk penelitian sendiri), kolom = metrik (contoh: Precision, Recall, F1, E%; atau MAP, P, R, F1, Acc, satuan %). [W09 s14, s16]
 - Beri format berbeda (misalnya tebal) pada angka terbaik di setiap metrik. [W09 s15]
 - Angka desimal: digit di belakang koma sesedikit mungkin, asal masih cukup membedakan antar angka. [W09 s15]
-- Beri catatan kaki tabel bila perlu (contoh: tanda * pada baris dengan keterangan fitur yang dipakai). [W09 s14] (gambar)
-- Baris penelitian sendiri boleh diberi label jelas (contoh: "This Work", "Penelitian yang dilakukan") dan tidak harus unggul di semua kolom; pada contoh slide, hasil sendiri tidak terbaik di setiap metrik. [W09 s14, s16] (gambar)
+- Beri catatan kaki tabel bila perlu (contoh: tanda * pada baris dengan keterangan fitur yang dipakai). [W09 s14]
+- Baris penelitian sendiri boleh diberi label jelas (contoh: "This Work", "Penelitian yang dilakukan") dan tidak harus unggul di semua kolom; pada contoh slide, hasil sendiri tidak terbaik di setiap metrik. [W09 s14, s16]
 
 ## Analisis Hasil Pengujian
 - Hasil utama membandingkan dengan pihak lain (eksternal). Analisis hasil pengujian umumnya menganalisis internal sistem yang dibangun pada beberapa kondisi berbeda. [W09 s19]
@@ -55,7 +55,7 @@ Sumber: deck W09 slide 4-6, 8-9, 11-17, 19-20, 22-23 (slide 14, 16, 20, 22, 23 d
 - TA S1 tidak dituntut memperoleh performa lebih baik daripada pembanding. Yang dituntut: implementasi yang benar serta analisis yang baik dan lengkap. [W09 s19]
 - Analisis melihat pengaruh kondisi berbeda: parameter, jenis data, threshold, sub-sistem. [W09 s20]
 - Lakukan analisis pada beberapa kondisi, tidak hanya satu. Contoh slide: selain pengaruh himpunan fitur, analisis juga pengaruh faktor lain. [W09 s20]
-- Contoh tabel analisis (ablation fitur): baris = kondisi (semua fitur, fitur terbaik, lalu satu fitur dilepas satu per satu), kolom = metrik. Terangkan notasi tabel (tanda "(-)" berarti fitur tidak digunakan). [W09 s20] (gambar)
+- Contoh tabel analisis (ablation fitur): baris = kondisi (semua fitur, fitur terbaik, lalu satu fitur dilepas satu per satu), kolom = metrik. Terangkan notasi tabel (tanda "(-)" berarti fitur tidak digunakan). [W09 s20]
 - Terangkan setiap tabel dan gambar yang ditampilkan agar jelas bagi pembaca. [W09 s20]
 
 ## Yang direncanakan di proposal TA (belum ada eksperimen)

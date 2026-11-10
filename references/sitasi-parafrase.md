@@ -10,25 +10,25 @@ Sumber: deck W05 slide 31-68 (slide 35, 37, 44, 45, 51 dibaca dari gambar) dan d
 - Tesis dan disertasi: hasil penelitian akademik mahasiswa S2 (tesis) atau S3 (disertasi); sering menjadi referensi dasar penelitian lanjutan. [W05 s33]
 
 ## Perbandingan jenis publikasi
-- Artikel jurnal: peer-reviewed, kecepatan publikasi lambat. [W05 s35] (gambar)
-- Konferensi paper: peer-reviewed, cepat. [W05 s35] (gambar)
-- Buku: editor-reviewed, sangat lambat. [W05 s35] (gambar)
-- Tesis/disertasi: non-reviewed, bervariasi. [W05 s35] (gambar)
+- Artikel jurnal: peer-reviewed, kecepatan publikasi lambat. [W05 s35]
+- Konferensi paper: peer-reviewed, cepat. [W05 s35]
+- Buku: editor-reviewed, sangat lambat. [W05 s35]
+- Tesis/disertasi: non-reviewed, bervariasi. [W05 s35]
 
 ## Artikel jurnal vs konferensi paper (prosiding)
-- Fokus penelitian: jurnal menekankan hasil penelitian matang dengan kerangka konseptual atau teoritis kuat; konferensi menyajikan hasil penelitian awal atau praktis dengan fokus kontribusi teknis, praktis, atau aplikatif. [W05 s45] (gambar)
-- Kontribusi: jurnal berupa konsep, metode, atau teori baru yang memperkaya ilmu; konferensi berupa solusi teknis atau implementasi praktis untuk masalah spesifik. [W05 s45] (gambar)
-- Proses review: jurnal biasanya lebih ketat dan panjang demi kualitas tinggi; konferensi lebih cepat karena menekankan kecepatan penyebaran ide dan inovasi. [W05 s45] (gambar)
-- Durasi publikasi: jurnal lebih lama karena evaluasi mendalam; konferensi lebih singkat, sering bersamaan dengan jadwal konferensi. [W05 s45] (gambar)
-- Cakupan audiens: jurnal untuk komunitas akademik dan peneliti yang mencari landasan teoritis; konferensi untuk praktisi, akademisi, dan profesional yang tertarik pada aplikasi teknologi terbaru. [W05 s45] (gambar)
-- Kewajiban presentasi: jurnal tidak ada; konferensi wajib mempresentasikan hasil di depan audiens dalam sesi konferensi. [W05 s45] (gambar)
+- Fokus penelitian: jurnal menekankan hasil penelitian matang dengan kerangka konseptual atau teoritis kuat; konferensi menyajikan hasil penelitian awal atau praktis dengan fokus kontribusi teknis, praktis, atau aplikatif. [W05 s45]
+- Kontribusi: jurnal berupa konsep, metode, atau teori baru yang memperkaya ilmu; konferensi berupa solusi teknis atau implementasi praktis untuk masalah spesifik. [W05 s45]
+- Proses review: jurnal biasanya lebih ketat dan panjang demi kualitas tinggi; konferensi lebih cepat karena menekankan kecepatan penyebaran ide dan inovasi. [W05 s45]
+- Durasi publikasi: jurnal lebih lama karena evaluasi mendalam; konferensi lebih singkat, sering bersamaan dengan jadwal konferensi. [W05 s45]
+- Cakupan audiens: jurnal untuk komunitas akademik dan peneliti yang mencari landasan teoritis; konferensi untuk praktisi, akademisi, dan profesional yang tertarik pada aplikasi teknologi terbaru. [W05 s45]
+- Kewajiban presentasi: jurnal tidak ada; konferensi wajib mempresentasikan hasil di depan audiens dalam sesi konferensi. [W05 s45]
 
 ## Research article vs review paper
-- Konten: research article berisi data asli dari eksperimen atau studi; review paper tidak berisi data asli, merangkum informasi dari berbagai sumber. [W05 s44, s51] (gambar)
-- Metodologi: research article menyertakan metodologi rinci untuk eksperimen atau pengumpulan data; review paper tidak punya metodologi eksperimen, tetapi mungkin mencakup metode pencarian dan seleksi literatur. [W05 s44] (gambar)
-- Kontribusi ilmu: research article menyumbang pengetahuan baru lewat temuan orisinal; review paper mengklarifikasi tren, tema, dan celah penelitian yang ada. [W05 s44] (gambar)
-- Pendekatan penulisan: research article berstruktur pendahuluan, metodologi, hasil, diskusi, kesimpulan; review paper berupa sintesis dan analisis literatur. [W05 s51] (gambar)
-- Waktu penerbitan: research article saat temuan siap dipublikasikan; review paper untuk ikhtisar terbaru. [W05 s51] (gambar)
+- Konten: research article berisi data asli dari eksperimen atau studi; review paper tidak berisi data asli, merangkum informasi dari berbagai sumber. [W05 s44, s51]
+- Metodologi: research article menyertakan metodologi rinci untuk eksperimen atau pengumpulan data; review paper tidak punya metodologi eksperimen, tetapi mungkin mencakup metode pencarian dan seleksi literatur. [W05 s44]
+- Kontribusi ilmu: research article menyumbang pengetahuan baru lewat temuan orisinal; review paper mengklarifikasi tren, tema, dan celah penelitian yang ada. [W05 s44]
+- Pendekatan penulisan: research article berstruktur pendahuluan, metodologi, hasil, diskusi, kesimpulan; review paper berupa sintesis dan analisis literatur. [W05 s51]
+- Waktu penerbitan: research article saat temuan siap dipublikasikan; review paper untuk ikhtisar terbaru. [W05 s51]
 - Research article: menyajikan hasil penelitian asli penulis; tujuannya memperkenalkan temuan baru, eksperimen, dan analisis data yang belum dipublikasikan. [W05 s52]
 - Struktur umum research article: Pendahuluan (latar belakang dan tujuan), Metodologi (metode dan pendekatan), Hasil (data dan temuan utama), Diskusi (interpretasi dan perbandingan dengan penelitian sebelumnya), Kesimpulan (temuan utama dan potensi dampak). [W05 s52]
 - Ciri research article: data asli dari eksperimen, survei, atau studi lapangan; fokus pada satu penelitian atau eksperimen spesifik; analisis statistik atau kualitatif; metodologi rinci agar penelitian dapat direproduksi. [W05 s53]

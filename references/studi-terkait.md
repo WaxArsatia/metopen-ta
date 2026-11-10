@@ -26,7 +26,7 @@ Sumber: deck W07 (slide 4-6, 8-10, 12-18, 20) dan W10 (slide 2-10). W07 s13 dan 
 ## Isi Studi Terkait (komponen)
 ### 1. Konsep dasar
 - Tulis konsep dasar lebih detail daripada di Pendahuluan, termasuk klasifikasi topik, disertai contoh. [W07 s12]
-- Contoh pada topik deteksi plagiat: definisi menurut berbagai pustaka; contoh input dan output proses; jenis-jenis proses (*source retrieval*, *text alignment*) seperti pada diagram alur deteksi plagiat (*suspicious document* ke *source retrieval* ke *candidate documents* ke *text alignment* ke *knowledge-based post-processing* ke *suspicious passages*, dengan *document collection*). [W07 s12-13] (gambar)
+- Contoh pada topik deteksi plagiat: definisi menurut berbagai pustaka; contoh input dan output proses; jenis-jenis proses (*source retrieval*, *text alignment*) seperti pada diagram alur deteksi plagiat (*suspicious document* ke *source retrieval* ke *candidate documents* ke *text alignment* ke *knowledge-based post-processing* ke *suspicious passages*, dengan *document collection*). [W07 s12-13]
 
 ### 2. Sistem/metode/algoritma yang ada
 - Terangkan sistem/metode/algoritma yang ada untuk bagian topik yang dikerjakan, bukan hanya yang akan dipakai di TA. Contoh: TA mengerjakan *text alignment*, maka terangkan semua metode *text alignment*. [W07 s14]
@@ -84,16 +84,16 @@ Sumber: deck W07 (slide 4-6, 8-10, 12-18, 20) dan W10 (slide 2-10). W07 s13 dan 
 
 ## Praktik penelusuran (Google Scholar)
 - Empat kegiatan praktik: penelusuran dengan Google Scholar; pengecekan kualitas karya ilmiah; identifikasi karya ilmiah secara mendalam; pakai *reference manager* (Mendeley). [W10 s6]
-- Contoh penelusuran (kueri "data imputation"): [W10 s7] (gambar)
+- Contoh penelusuran (kueri "data imputation"): [W10 s7]
   - filter tahun lewat menu kiri ("Sejak 2019");
   - lihat jumlah "Dirujuk N kali" (jumlah sitasi) tiap hasil;
   - lihat tautan akses penuh di kanan (HTML/PDF) untuk memeriksa ketersediaan teks lengkap.
-- Lingkaran merah pada tangkapan layar menyorot filter tahun, jumlah sitasi, dan tautan teks lengkap. [W10 s7] (gambar)
+- Lingkaran merah pada tangkapan layar menyorot filter tahun, jumlah sitasi, dan tautan teks lengkap. [W10 s7]
 
 ## Cek kualitas jurnal (SCImago, SJR)
-- Buka scimagojr.com (*Scimago Journal & Country Rank*). [W10 s8] (gambar)
-- Cari nama jurnal (contoh: "Applied Artificial Intelligence") di kotak pencarian. [W10 s8-9] (gambar)
-- Pilih hasil yang dilingkari: jurnal yang dicari beserta negara dan penerbitnya (contoh: United Kingdom, Taylor and Francis Ltd.); hasil lain di daftar berupa prosiding konferensi. [W10 s9] (gambar)
-- Buka halaman jurnal dan baca grafik *Quartiles* per tahun (warna per kuartil); slide menyorot kuartil tahun terakhir pada grafik (contoh: Q3 untuk 2022). [W10 s10] (gambar)
+- Buka scimagojr.com (*Scimago Journal & Country Rank*). [W10 s8]
+- Cari nama jurnal (contoh: "Applied Artificial Intelligence") di kotak pencarian. [W10 s8-9]
+- Pilih hasil yang dilingkari: jurnal yang dicari beserta negara dan penerbitnya (contoh: United Kingdom, Taylor and Francis Ltd.); hasil lain di daftar berupa prosiding konferensi. [W10 s9]
+- Buka halaman jurnal dan baca grafik *Quartiles* per tahun (warna per kuartil); slide menyorot kuartil tahun terakhir pada grafik (contoh: Q3 untuk 2022). [W10 s10]
 - Slide menyorot kuartil tahun terakhir pada grafik SCImago tanpa menyatakan apakah yang dipakai kuartil tahun terbit artikel atau tahun terbaru. Tetapkan satu pilihan dan catat di aturan proyek. [W10 s10]
 - Slide hanya menunjukkan cek lewat SCImago. Cara cek SINTA tidak dibahas, jadi verifikasi status indeks lewat situs resmi masing-masing dan sebut sumbernya. [W10 s8-10]

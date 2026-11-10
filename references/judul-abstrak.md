@@ -1,6 +1,6 @@
 # Judul, identitas penulis, abstrak, dan kata kunci
 Aturan judul, identitas penulis, abstrak (apa, mengapa, bagaimana, hasil utama), dan kata kunci untuk proposal/laporan TA.
-Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(gambar)" berarti info hanya terbaca dari render slide.
+Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). W04 s8-11, s16, s19, s22-28, s33-38 dan W05 s19, s22, s27, s29 dibaca dari gambar.
 
 ## Istilah
 
@@ -19,7 +19,7 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 
 - Tulis singkat dan spesifik, tetapi cukup jelas memberi gambaran isi, termasuk kontribusi utama dan ruang lingkup. [W04 s8]
 - Judul harus sesuai pekerjaan sebenarnya. Contoh tepat untuk pembangunan basis data parafrase terjemahan Al Qur'an: "Pembangunan Basis Data Parafrase Al Qur'an Terjemahan Bahasa Indonesia". Contoh tidak tepat: "Proses Penafsiran Al-Qur'an dengan Menggunakan Paraphrase Database" (menjanjikan hal lain dari isi). [W04 s8]
-- Pola yang diperlihatkan contoh paper: judul memuat topik/tugas (bagian "apa") dan inti pendekatan (bagian "bagaimana"), misalnya "Learning to Extract Attribute Value from Product" (topik) + "via Question Answering: A Multi-task Approach" (pendekatan). [W04 s22, W05 s22] (gambar)
+- Pola yang diperlihatkan contoh paper: judul memuat topik/tugas (bagian "apa") dan inti pendekatan (bagian "bagaimana"), misalnya "Learning to Extract Attribute Value from Product" (topik) + "via Question Answering: A Multi-task Approach" (pendekatan). [W04 s22, W05 s22]
 - Jika judul menyebut sistem/algoritma/metode/pendekatan, isi tulisan wajib memberi justifikasi mengapa itu dipilih. Contoh: judul "... dengan Metode Jaro-Winkler" menuntut penjelasan alasan memilih Jaro-Winkler. [W04 s17]
 - Terangkan istilah penting dalam judul sesegera mungkin, paling lambat di bagian Pendahuluan, disertai contoh bila perlu (contoh: jelaskan apa itu parafrase beserta contohnya). [W04 s18]
 - Cantumkan istilah penting dalam judul sebagai kata kunci (ditulis setelah abstrak). [W04 s18]
@@ -28,16 +28,16 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 ## Panjang judul
 
 - Judul terlalu rumit (biasanya tercermin dari judul panjang) sering sulit dipahami. Usahakan maksimal 15 kata. [W04 s9]
-- Cara memangkas yang diperlihatkan: buang kata pembuka dan frasa penutup yang tidak perlu. Contoh: "A New Signature File Scheme Based on Multiple-Block Descriptor Files for Indexing Very Large Data Bases" dipangkas dengan mencoret "A New" dan "for Indexing Very Large Data Bases". [W04 s9] (gambar)
-- Contoh lain: "An Investigation of the Effectiveness of Extensions to Standard Ranking Techniques for Large Text Collections" dipangkas dengan mencoret "An Investigation of the". [W04 s10] (gambar)
+- Cara memangkas yang diperlihatkan: buang kata pembuka dan frasa penutup yang tidak perlu. Contoh: "A New Signature File Scheme Based on Multiple-Block Descriptor Files for Indexing Very Large Data Bases" dipangkas dengan mencoret "A New" dan "for Indexing Very Large Data Bases". [W04 s9]
+- Contoh lain: "An Investigation of the Effectiveness of Extensions to Standard Ranking Techniques for Large Text Collections" dipangkas dengan mencoret "An Investigation of the". [W04 s10]
 - Judul terlalu pendek, pengertiannya terlalu luas. Contoh: "Huffman Coding for Databases", lebih baik "Limited-Memory Huffman Coding for Databases of Textual and Numeric Data". [W04 s12]
 - Contoh serupa: "Spam Filtering" terlalu singkat (padahal artikel hanya mencakup hal tertentu). [W04 s19]
 - Contoh terlalu panjang: "Spam Filtering Menggunakan Support Vector Machine dengan Kernal gaussian Radial Basis Function, Polinomial dan Sigmoid pada Data Email pegawai Perusahaan ABC" (rincian kernel dan objek data terlalu detail). [W04 s19]
-- Hindari istilah kurang lazim. Contoh: "SVM untuk Penyeleksi Spam" memakai "penyeleksi" yang tidak lazim. Judul tepat: "Spam Filtering Menggunakan Support Vector Machine". [W04 s19] (gambar)
+- Hindari istilah kurang lazim. Contoh: "SVM untuk Penyeleksi Spam" memakai "penyeleksi" yang tidak lazim. Judul tepat: "Spam Filtering Menggunakan Support Vector Machine". [W04 s19]
 
 ## Kata yang dihindari
 
-- Pada TA S1 FIF, banyak pekerjaan berupa implementasi dan analisis. Lebih baik kata "Implementasi dan Analisis" tidak ditulis di judul (anjuran, bukan larangan mutlak). Contoh: pada "Analisis dan Implementasi Entities Expansion pada DBpedia dalam Membangun Dataset NER Indonesia Secara Otomatis", frasa "Analisis dan Implementasi" dicoret. [W04 s11] (gambar)
+- Pada TA S1 FIF, banyak pekerjaan berupa implementasi dan analisis. Lebih baik kata "Implementasi dan Analisis" tidak ditulis di judul (anjuran, bukan larangan mutlak). Contoh: pada "Analisis dan Implementasi Entities Expansion pada DBpedia dalam Membangun Dataset NER Indonesia Secara Otomatis", frasa "Analisis dan Implementasi" dicoret. [W04 s11]
 - Jangan memakai klaim berlebihan atau seruan (lihat contoh "Strong Modes Can Change the World!"). [W04 s13]
 
 ## Format penulisan judul
@@ -46,8 +46,8 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 - Kata pertama selalu diawali huruf besar, apa pun jenis katanya. [W04 s15]
 - Judul (artikel maupun bagian) tidak harus kalimat lengkap. Kalimat lengkap kadang membuat judul terasa aneh. [W04 s15]
 - Judul tidak diakhiri titik. [W04 s15]
-- Judul subbagian harus sesuai dengan judul bagian induknya. Contoh dari slide: "1 List dan Tree" memiliki subbagian "1.1 List" dan "1.2 Tree". [W04 s16] (gambar)
-- Judul subbagian harus sesuai judul bagiannya: subbagian menguraikan unsur bagian induk (contoh 1 List dan Tree, 1.1 List, 1.2 Tree). [W04 s16 (gambar)]
+- Judul subbagian harus sesuai dengan judul bagian induknya. Contoh dari slide: "1 List dan Tree" memiliki subbagian "1.1 List" dan "1.2 Tree". [W04 s16]
+- Judul subbagian harus sesuai judul bagiannya: subbagian menguraikan unsur bagian induk (contoh 1 List dan Tree, 1.1 List, 1.2 Tree). [W04 s16]
 
 ## Identitas penulis
 
@@ -83,7 +83,7 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 ## Abstrak: Bagaimana
 
 - Jawab: bagaimana solusinya? Jelaskan garis besar sistem solusi yang telah dilakukan. [W05 s13, W04 s32]
-- Awali dengan kata yang menunjukkan kontribusi penulis ("we propose", "we argue", "we present", "we introduce"; pada slide kata ini digarisbawahi). Bagian ini menandai metode usulan sekaligus kontribusi. [W05 s22, s27; W04 s23-28] (gambar)
+- Awali dengan kata yang menunjukkan kontribusi penulis ("we propose", "we argue", "we present", "we introduce"; pada slide kata ini digarisbawahi). Bagian ini menandai metode usulan sekaligus kontribusi. [W05 s22, s27; W04 s23-28]
 - Jelaskan secara spesifik dan cukup detail. Contoh 1 merinci komponen model (*encoder*, model bahasa, *classifier*) lalu menyatukannya dalam satu kerangka. [W05 s22]
 - Inti pendekatan yang disebut di bagian bagaimana harus muncul di judul (Contoh 1: "via question answering: a multi-task approach"). [W05 s22]
 - Contoh pola untuk parafrase: sebut apa yang dibangun, bahan yang dipakai (Al Qur'an dan beberapa versi terjemahan), dan prinsip kerjanya (versi terjemahan berbeda pada tiap ayat menghasilkan parafrase tingkat kata dan frasa). [W05 s13]
@@ -100,10 +100,10 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 ## Hubungan judul, abstrak, kata kunci
 
 - Judul, abstrak, dan kata kunci harus konsisten: judul disusun dari informasi abstrak dan kata kunci. [W04 s7]
-- Render contoh paper memberi kode warna: biru = apa, hijau = mengapa, merah = bagaimana, ungu = hasil utama. Kata topik di judul dan kata kunci berwarna sama dengan bagian "apa" di abstrak; kata metode di judul dan kata kunci berwarna sama dengan bagian "bagaimana". Artinya setiap istilah judul dapat ditelusuri ke satu bagian abstrak. [W04 s22-28, s33-38; W05 s19, s29] (gambar)
-- Contoh: pada "Multitask Feature Selection by Graph-Clustered Feature Sharing", topik (*multitask feature selection*) dan metode (*graph-clustered feature sharing*) tampil di judul, di abstrak, dan di kata kunci. [W04 s26] (gambar)
-- Contoh judul dalam slide: ada yang memuat topik dan pendekatan (W04 s24, s27, s28), ada yang seluruhnya berupa pendekatan/metode (W04 s25). Slide tidak menetapkan komposisi wajib judul selain "singkat, spesifik, memuat kontribusi utama dan ruang lingkup". [W04 s8, s24-25, s27-28] (gambar)
-- Panjang abstrak dalam contoh sangat bervariasi: contoh W04 s24 hanya beberapa kalimat, tetapi tetap memuat apa, mengapa (gap), bagaimana, dan satu kalimat hasil. [W04 s24, s35] (gambar)
+- Render contoh paper memberi kode warna: biru = apa, hijau = mengapa, merah = bagaimana, ungu = hasil utama. Kata topik di judul dan kata kunci berwarna sama dengan bagian "apa" di abstrak; kata metode di judul dan kata kunci berwarna sama dengan bagian "bagaimana". Artinya setiap istilah judul dapat ditelusuri ke satu bagian abstrak. [W04 s22-28, s33-38; W05 s19, s29]
+- Contoh: pada "Multitask Feature Selection by Graph-Clustered Feature Sharing", topik (*multitask feature selection*) dan metode (*graph-clustered feature sharing*) tampil di judul, di abstrak, dan di kata kunci. [W04 s26]
+- Contoh judul dalam slide: ada yang memuat topik dan pendekatan (W04 s24, s27, s28), ada yang seluruhnya berupa pendekatan/metode (W04 s25). Slide tidak menetapkan komposisi wajib judul selain "singkat, spesifik, memuat kontribusi utama dan ruang lingkup". [W04 s8, s24-25, s27-28]
+- Panjang abstrak dalam contoh sangat bervariasi: contoh W04 s24 hanya beberapa kalimat, tetapi tetap memuat apa, mengapa (gap), bagaimana, dan satu kalimat hasil. [W04 s24, s35]
 
 ## Hubungan abstrak dengan Pendahuluan
 
@@ -118,4 +118,4 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(
 - Jumlah biasanya sekitar lima. Pada TA FIF maksimal enam. [W05 s17]
 - Tulis dengan huruf kecil, kecuali singkatan. [W05 s17]
 - Cantumkan istilah penting judul sebagai kata kunci, ditulis setelah abstrak. [W04 s18]
-- Contoh daftar: "attribute value extraction, question answering, generalization"; "Message stance, Twitter, rumours, semi-supervised, label propagation, label spreading". [W04 s22-23] (gambar)
+- Contoh daftar: "attribute value extraction, question answering, generalization"; "Message stance, Twitter, rumours, semi-supervised, label propagation, label spreading". [W04 s22-23]
