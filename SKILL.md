@@ -1,9 +1,9 @@
 ---
 name: metopen-ta
-description: Aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom, dengan tag sumber per slide. Muat setiap kali pengguna menulis, merevisi, atau memeriksa proposal, laporan, atau slide sidang Tugas Akhir (TA, skripsi), terutama judul, abstrak, kata kunci, Latar Belakang, Perumusan Masalah, Tujuan, Batasan Masalah, Studi Terkait atau Tinjauan Pustaka, rencana pengujian dan metrik, sitasi IEEE atau APA, parafrase, dan checklist penyuntingan, meskipun skill tidak disebut.
+description: "Aturan Metopen FIF Telkom untuk Tugas Akhir (TA, skripsi), bertag sumber per slide. Muat saat menulis, merevisi, atau memeriksa proposal, laporan, atau slide sidang TA: struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
 ---
 
-Pengetahuan metopen umum, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber, misalnya `[W06 s15]` (deck W06, slide 15), supaya klaim bisa diperiksa ke slide asli. Salinan slide ada di `slides/`, dan `SUMBER.md` memetakan kode deck ke berkas serta topiknya, termasuk cara membuka slide tertentu. Tag `(gambar)` berarti isinya hanya terbaca dari render slide.
+Pengetahuan metopen umum, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber, misalnya `[W06 s15]` (deck W06, slide 15). Saat sebuah tag perlu diperiksa ke slide asli, baca `SUMBER.md` (peta kode deck ke berkas di `slides/` dan perintah membukanya). Baris "Sumber" di kepala tiap berkas referensi mendaftar slide yang hanya terbaca dari gambar.
 
 ## Urutan otoritas
 
@@ -13,7 +13,7 @@ Saat dua sumber bertentangan, yang lebih atas menang:
 2. Templat resmi program studi atau fakultas.
 3. Slide kuliah (referensi ini).
 
-Slide adalah dasar umum, bukan perintah yang menimpa keputusan proyek. Baca aturan proyek pengguna lebih dulu bila ada, lalu pakai referensi di bawah untuk bagian yang belum diatur. Konflik antara slide dan aturan proyek atau templat: laporkan ke pengguna, jangan pilih sendiri, lalu sarankan mencatat keputusannya di aturan proyek.
+Slide adalah dasar umum, bukan perintah yang menimpa keputusan proyek. Baca aturan proyek pengguna lebih dulu bila ada, lalu pakai referensi di bawah untuk bagian yang belum diatur. Konflik antara slide dan aturan proyek atau templat: laporkan ke pengguna dan minta keputusannya, juga saat pengguna meminta mengikuti slide sepenuhnya, lalu sarankan mencatat keputusannya di aturan proyek.
 
 ## Penunjuk: kerjakan X, baca Y
 
@@ -36,6 +36,5 @@ Naskah yang menyentuh beberapa bagian membaca beberapa berkas. Pemeriksaan akhir
 
 - Terapkan setiap aturan di berkas yang dibaca pada bagian yang sedang dikerjakan, lalu sebutkan tag sumbernya saat menjelaskan alasan perubahan kepada pengguna.
 - Sebut sesuatu "keputusan proyek" hanya setelah menemukan barisnya di aturan proyek atau templat. Bila tidak ada, itu belum diputuskan: laporkan ke pengguna.
-- Bila pengguna memilih mengikuti slide secara penuh di suatu bagian, tetap laporkan setiap konflik dengan aturan proyek atau templat.
-- Sebelum finalisasi dokumen, ingatkan pengguna menjalankan pemeriksaan kemiripan kampus bila diwajibkan. Agen tidak menjalankannya.
-- Aturan gaya bahasa dan format dokumen milik proyek pengguna, bukan skill ini.
+- Sebelum finalisasi dokumen, ingatkan pengguna menjalankan pemeriksaan kemiripan kampus bila diwajibkan.
+- Gaya bahasa dan format dokumen mengikuti aturan proyek pengguna.
