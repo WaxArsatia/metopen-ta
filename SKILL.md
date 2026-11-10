@@ -1,6 +1,6 @@
 ---
 name: metopen-ta
-description: Aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom untuk menulis, merevisi, atau memeriksa proposal dan laporan TA. Muat sebelum menyentuh judul, abstrak, Latar Belakang, Perumusan Masalah, Tujuan, Batasan, Studi Terkait, Evaluasi, sitasi, parafrase, checklist penyuntingan, atau slide sidang.
+description: Aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom, dengan tag sumber per slide. Muat setiap kali pengguna menulis, merevisi, atau memeriksa proposal, laporan, atau slide sidang Tugas Akhir (TA, skripsi), terutama judul, abstrak, kata kunci, Latar Belakang, Perumusan Masalah, Tujuan, Batasan Masalah, Studi Terkait atau Tinjauan Pustaka, rencana pengujian dan metrik, sitasi IEEE atau APA, parafrase, dan checklist penyuntingan, meskipun skill tidak disebut.
 ---
 
 Pengetahuan metopen umum, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber, misalnya `[W06 s15]` (deck W06, slide 15), supaya klaim bisa diperiksa ke slide asli. Salinan slide ada di `slides/`, dan `SUMBER.md` memetakan kode deck ke berkas serta topiknya, termasuk cara membuka slide tertentu. Tag `(gambar)` berarti isinya hanya terbaca dari render slide.

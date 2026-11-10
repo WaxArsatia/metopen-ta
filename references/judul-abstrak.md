@@ -1,3 +1,4 @@
+# Judul, identitas penulis, abstrak, dan kata kunci
 Aturan judul, identitas penulis, abstrak (apa, mengapa, bagaimana, hasil utama), dan kata kunci untuk proposal/laporan TA.
 Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). Tag "(gambar)" berarti info hanya terbaca dari render slide.
 

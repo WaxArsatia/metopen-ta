@@ -1,4 +1,5 @@
-# Slide dan presentasi: isi slide, tampilan, sitasi, formula, penyampaian, sidang, tanya jawab, checklist
+# Slide, presentasi, dan sidang
+Isi slide, tampilan, sitasi, formula, penyampaian, sidang, tanya jawab, dan checklist.
 Sumber: deck W13 (slide 2-41). Teks hasil ekstraksi kosong, jadi semua slide dibaca dari gambar render; tiap butir diberi tanda (gambar).
 
 ## Konteks komunikasi lisan TA

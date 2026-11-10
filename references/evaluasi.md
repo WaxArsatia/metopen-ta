@@ -1,3 +1,4 @@
+# Evaluasi
 Aturan bagian Evaluasi (pengantar evaluasi, hasil pengujian, analisis hasil pengujian) dan rencana evaluasi untuk proposal TA.
 Sumber: deck W09 slide 4-6, 8-9, 11-17, 19-20, 22-23 (slide 14, 16, 20, 22, 23 dibaca dari gambar).
 

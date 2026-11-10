@@ -1,46 +1,16 @@
 # metopen-ta
 
-Skill agen AI berisi aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom University, untuk menulis, merevisi, dan memeriksa proposal serta laporan Tugas Akhir. Setiap aturan membawa tag sumber (misalnya `[W06 s15]`) yang menunjuk ke slide asli.
+Skill agen AI yang memuat aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom University. Dipakai untuk menulis, merevisi, dan memeriksa proposal serta laporan Tugas Akhir (TA). Setiap aturan membawa tag sumber (misalnya `[W06 s15]`, deck W06 slide 15) yang menunjuk ke slide asli, jadi setiap saran bisa diperiksa.
 
 *English: an agent skill that distills a university thesis-writing course (Telkom University, Informatics) into on-demand reference files with per-rule slide citations. Content is in Indonesian.*
 
-## Status dan hak cipta
-
-Isi `references/` berupa ringkasan parafrase dari slide dosen. Salinan slide aslinya disertakan di `slides/` agar tag sumber bisa diperiksa di mesin mana pun tanpa memindahkan berkas terpisah. Slide itu milik pengampu kelas dan Universitas Telkom, dan penyusun repo telah memperoleh izin untuk membagikannya. Repo ini belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Lihat `NOTICE.md`.
-
-## Isi
-
-```
-metopen-ta/
-├── SKILL.md              pintu masuk: urutan otoritas dan tabel "kerjakan X, baca Y"
-├── SUMBER.md             pemetaan kode deck (W01 sampai W13) ke berkas, topik, dan cara memeriksa tag
-├── slides/               salinan slide asli (12 berkas, sekitar 31 MB)
-├── references/           8 berkas topik, dimuat sesuai kebutuhan
-│   ├── struktur-isi.md
-│   ├── judul-abstrak.md
-│   ├── pendahuluan.md
-│   ├── studi-terkait.md
-│   ├── evaluasi.md
-│   ├── sitasi-parafrase.md
-│   ├── checklist-editing.md
-│   └── presentasi-sidang.md
-├── NOTICE.md
-└── README.md             berkas ini (tidak dimuat agen)
-```
-
-Agen hanya membaca `SKILL.md` lebih dulu, lalu satu atau dua berkas `references/` sesuai bagian yang dikerjakan. Folder `slides/` hanya dibuka saat sebuah tag perlu diperiksa.
-
 ## Pasang
-
-### Dengan `npx skills` (CLI [vercel-labs/skills](https://github.com/vercel-labs/skills))
-
-Pasang ke proyek yang sedang dibuka (cakupan bawaan):
 
 ```bash
 npx skills add WaxArsatia/metopen-ta
 ```
 
-Pasang untuk semua proyek (folder pengguna) di Claude Code, tanpa pertanyaan:
+Perintah itu memasang skill ke proyek yang sedang dibuka. Untuk semua proyek di Claude Code, tanpa pertanyaan:
 
 ```bash
 npx skills add WaxArsatia/metopen-ta -g -a claude-code -y
@@ -52,17 +22,26 @@ Opsi yang berguna:
 |---|---|
 | `-g`, `--global` | Pasang ke folder pengguna, bukan ke proyek |
 | `-a`, `--agent <agen>` | Pilih agen tujuan, misalnya `claude-code` atau `codex` |
-| `-l`, `--list` | Tampilkan skill yang tersedia di repo tanpa memasang |
-| `--copy` | Salin berkas, bukan symlink (untuk sistem yang tidak mendukung symlink) |
+| `-l`, `--list` | Tampilkan skill di repo tanpa memasang |
+| `--copy` | Salin berkas, bukan symlink |
 | `-y`, `--yes` | Lewati semua konfirmasi |
 
-Catatan:
-- Pakai bentuk `WaxArsatia/metopen-ta` atau URL repo GitHub. Jangan memakai tautan langsung ke `SKILL.md` mentah, karena bentuk itu hanya memasang `SKILL.md` dan folder `references/` tidak ikut.
-- Pemasangan menyalin seluruh folder skill, termasuk `references/` dan `slides/` (sekitar 31 MB).
-- CLI itu mengirim data penggunaan anonim. Matikan dengan `DISABLE_TELEMETRY=1` atau `DO_NOT_TRACK=1`.
-- Detail opsi lengkap ada di [dokumentasi `skills add`](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
+Kelola setelah terpasang:
 
-### Dengan `git clone`
+```bash
+npx skills list              # daftar skill terpasang
+npx skills update metopen-ta # perbarui
+npx skills remove metopen-ta # hapus
+```
+
+Catatan:
+- Pakai `WaxArsatia/metopen-ta` atau URL repo GitHub. Tautan langsung ke `SKILL.md` mentah hanya memasang `SKILL.md`, sehingga `references/` tidak ikut.
+- Pemasangan menyalin seluruh folder skill, termasuk `slides/` (sekitar 31 MB).
+- CLI mengirim data penggunaan anonim. Matikan dengan `DISABLE_TELEMETRY=1` atau `DO_NOT_TRACK=1`.
+- Opsi lengkap ada di [dokumentasi `skills add`](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
+
+<details>
+<summary>Pasang manual dengan <code>git clone</code></summary>
 
 Claude Code, per pengguna (berlaku di semua proyek):
 
@@ -78,11 +57,78 @@ git clone https://github.com/WaxArsatia/metopen-ta.git <proyek-anda>/.claude/ski
 
 Perbarui dengan `git pull` di folder itu.
 
-Harness agen lain: salin folder ini, lalu arahkan berkas instruksi proyek (misalnya `AGENTS.md`) ke `SKILL.md` dengan kalimat seperti: "Sebelum menulis atau memeriksa proposal atau TA, baca `metopen-ta/SKILL.md` dan ikuti penunjuknya." Berkas `references/` dibuka sesuai tabel di `SKILL.md`.
+Agen lain: salin folder ini, lalu tambahkan ke `AGENTS.md` proyek kalimat seperti "Sebelum menulis atau memeriksa proposal atau TA, baca `metopen-ta/SKILL.md` dan ikuti penunjuknya."
+
+</details>
+
+## Kapan skill ini dipakai
+
+Agen memuat skill ini sendiri saat tugasnya menyangkut penulisan atau pemeriksaan proposal, laporan, atau slide sidang TA. Nama skill tidak perlu disebut. Menyebut `metopen-ta` secara eksplisit tetap memastikan skill termuat.
+
+### Contoh prompt
+
+Menulis:
+- "Susun draf Latar Belakang proposal TA saya tentang klasifikasi gestur dengan sensor IMU. Ikuti aturan Metopen."
+- "Buat kerangka Bab 1 proposal TA: bagian apa saja yang harus ada dan urutannya?"
+- "Tulis Perumusan Masalah dan Tujuan dari topik ini, lalu cek apakah keduanya saling memetakan."
+- "Bantu tulis abstrak dari draf proposal ini, lengkap dengan kata kunci."
+
+Memeriksa dan merevisi:
+- "Periksa Latar Belakang saya terhadap aturan Metopen. Tunjukkan bagian yang menyimpang beserta tag slidenya."
+- "Apakah Batasan Masalah saya sudah benar? Rasanya ada yang mengulang judul."
+- "Cek apakah daftar pustaka dan sitasi di bab ini sudah konsisten dengan gaya IEEE."
+- "Parafrase paragraf ini supaya tidak terkena plagiarisme, tanpa mengubah maknanya."
+
+Merencanakan pengujian dan studi terkait:
+- "Rencana evaluasi saya sudah memuat dataset, baseline, dan metrik? Apa yang masih kurang?"
+- "Bagaimana cara menyusun Studi Terkait dan memeriksa kualitas jurnal yang saya kutip?"
+
+Sidang dan penyelesaian:
+- "Buatkan outline slide presentasi proposal TA 15 menit sesuai aturan tampilan Metopen."
+- "Jalankan checklist penyuntingan akhir sebelum proposal ini saya kirim ke calon pembimbing."
+
+### Yang tidak dilakukan
+
+- Tidak menjalankan pemeriksaan kemiripan (plagiarisme) kampus. Agen hanya mengingatkan.
+- Tidak mengecek indeks atau kuartil jurnal.
+- Tidak menetapkan keputusan proyek Anda. Konflik antara slide dan templat atau aturan proyek dilaporkan, bukan dipilih sendiri.
+
+## Isi repo
+
+```
+metopen-ta/
+├── SKILL.md       pintu masuk: urutan otoritas dan tabel "kerjakan X, baca Y"
+├── SUMBER.md      kode deck (W01 sampai W13) ke berkas slide, topik, dan cara memeriksa tag
+├── references/    8 berkas topik, dimuat sesuai kebutuhan
+├── slides/        salinan slide asli (12 berkas, sekitar 31 MB)
+└── README.md      berkas ini (untuk manusia, tidak dimuat agen)
+```
+
+| Berkas di `references/` | Topik |
+|---|---|
+| `struktur-isi.md` | Isi dan urutan proposal atau laporan, jenis metode penelitian |
+| `judul-abstrak.md` | Judul, identitas penulis, abstrak, kata kunci |
+| `pendahuluan.md` | Latar Belakang, Perumusan Masalah, Batasan, Tujuan |
+| `studi-terkait.md` | Studi terkait, penelusuran pustaka, kualitas jurnal |
+| `evaluasi.md` | Rencana dan hasil pengujian, metrik, analisis |
+| `sitasi-parafrase.md` | Sitasi IEEE dan APA, jenis publikasi, parafrase |
+| `checklist-editing.md` | Penyuntingan dan pemeriksaan akhir |
+| `presentasi-sidang.md` | Slide dan persiapan sidang |
+
+## Cara kerja
+
+Skill memakai pemuatan bertahap (*progressive disclosure*) sesuai [spesifikasi Agent Skills](https://agentskills.io/specification):
+
+1. Nama dan deskripsi selalu ada di konteks agen, sebagai penentu kapan skill dipakai.
+2. `SKILL.md` dimuat saat skill aktif. Isinya urutan otoritas dan tabel penunjuk ke berkas topik.
+3. Agen membuka satu atau dua berkas `references/` sesuai bagian yang dikerjakan.
+4. `slides/` hanya dibuka saat sebuah tag perlu diperiksa. Cara memeriksanya ada di `SUMBER.md`.
+
+Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi prodi atau fakultas, lalu slide kuliah.
 
 ## Menyimpan keputusan proyek sendiri
 
-Skill ini sengaja umum. Keputusan khusus Anda (struktur bab dari templat prodi, bagian yang dibuang, batas referensi, gaya sitasi) jangan diubah di sini. Catat di `CLAUDE.md` atau `AGENTS.md` proyek Anda. `SKILL.md` menetapkan bahwa aturan proyek menang atas slide, dan konflik dilaporkan ke Anda dulu.
+Skill ini sengaja umum. Keputusan khusus Anda (struktur bab dari templat prodi, bagian yang dibuang, batas referensi, gaya sitasi) jangan diubah di sini. Catat di `CLAUDE.md` atau `AGENTS.md` proyek Anda, karena aturan proyek menang atas slide.
 
 Contoh catatan di `CLAUDE.md` proyek:
 
@@ -95,9 +141,15 @@ Keputusan proyek (menang atas slide):
 - Sitasi IEEE bernomor.
 ```
 
-## Batasan yang perlu diketahui
+## Batasan
 
 - Ringkasan bergantung pada ekstraksi teks dan pembacaan visual slide bergambar. Cocokkan dengan slide asli sebelum menjadikan aturan sebagai dasar keputusan penting.
 - Slide mengacu ke Template Laporan TA untuk laporan akhir. Untuk proposal, templat proposal fakultas dan aturan proyek Anda lebih tinggi derajatnya.
-- Skill tidak menjalankan pemeriksaan kemiripan (plagiarisme) dan tidak mengecek indeks jurnal.
-- Clone pertama mengunduh sekitar 31 MB karena memuat slide. Memeriksa slide bergambar butuh LibreOffice dan `pdftoppm` (lihat `SUMBER.md`).
+- Memeriksa slide bergambar butuh LibreOffice dan `pdftoppm` (lihat `SUMBER.md`).
+
+## Hak cipta dan lisensi
+
+- Slide di `slides/` milik pengampu kelas dan Universitas Telkom. Penyusun repo memperoleh izin untuk membagikannya agar tag sumber bisa diperiksa tanpa berkas terpisah. Izin itu tidak mengalihkan hak cipta slide kepada penyusun repo atau pemakai repo.
+- Isi `references/` adalah ringkasan parafrase dari slide tersebut. Contoh judul, kutipan referensi, dan nama penulis di dalamnya berasal dari contoh di slide.
+- Repo ini bukan materi resmi universitas dan tidak mewakili pandangan universitas.
+- Repo belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Bila lisensi ditambahkan nanti, lisensi itu harus mengecualikan `slides/`.

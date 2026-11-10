@@ -1,4 +1,5 @@
-# Studi Terkait (Tinjauan Pustaka) dan Literature Review (pemilihan, penelusuran, cek kualitas pustaka)
+# Studi Terkait dan Literature Review
+Studi Terkait (Tinjauan Pustaka) dan Literature Review: pemilihan, penelusuran, dan cek kualitas pustaka.
 Sumber: deck W07 (slide 4-6, 8-10, 12-18, 20) dan W10 (slide 2-10). W07 s13 dan W10 s7-10 dibaca dari gambar.
 
 ## Fungsi dan penamaan

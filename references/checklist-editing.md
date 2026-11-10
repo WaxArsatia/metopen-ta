@@ -1,3 +1,4 @@
+# Checklist penyuntingan dan tips TA
 Checklist penyuntingan (per bab dan umum) dan tips mengerjakan TA, untuk dipakai saat memeriksa draf proposal atau laporan.
 Sumber: W12 (s4-9; s7-9 berupa gambar, ditranskripsi utuh) dan Tips (s2-10; s1 dan s11 hanya sampul dan penutup).
 

@@ -1,4 +1,5 @@
-# Pendahuluan: isi, Latar Belakang, Topik dan Batasannya (Perumusan Masalah), Tujuan, Kontribusi, Organisasi Tulisan, Daftar Pertanyaan
+# Pendahuluan
+Isi Pendahuluan: Latar Belakang, Topik dan Batasannya (Perumusan Masalah), Tujuan, Kontribusi, Organisasi Tulisan, dan Daftar Pertanyaan.
 Sumber: deck W06 (slide 4-5, 7, 9-18, 20-21, 23, 25, 27-28). Slide 11 dan 28 dibaca dari gambar.
 
 ## Fungsi dan isi bagian Pendahuluan
