@@ -1,6 +1,6 @@
 ---
 name: metopen-ta
-description: "Aturan Metopen dan templat resmi FIF Telkom untuk Tugas Akhir (TA, skripsi), bertag sumber. Muat saat menulis, merevisi, memformat, atau memeriksa proposal, buku TA, jurnal TA, atau slide sidang: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir, berkas .docx."
+description: "Aturan Metopen dan templat resmi FIF Telkom University untuk Tugas Akhir (TA, skripsi), bertag sumber. Pakai setiap kali menulis, merevisi, memformat, atau memeriksa proposal TA, buku TA, jurnal TA, atau slide sidang, juga saat pengguna hanya menyebut bab, bagian, atau berkas .docx TA tanpa menyebut Metopen atau templat: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
 ---
 
 Pengetahuan metopen dan templat FIF, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber: `[W06 s15]` untuk slide (deck W06, slide 15), `[TP hlm. 6]`, `[TB hlm. 25]`, `[TJ hlm. 4]` untuk templat Proposal, Buku TA, dan Jurnal TA (halaman PDF hasil render), dan `[TB xml]` untuk fakta dari pengaturan di dalam docx. Peta tag ke berkas dan cara memeriksanya ada di `SUMBER.md`.
@@ -36,9 +36,17 @@ Baca hanya berkas yang cabangnya sedang dikerjakan.
 
 Menulis atau merevisi satu bagian membaca berkas isinya ditambah bagian jenis dokumen yang sesuai di `format-dokumen.md`, karena templat juga mengatur isi tiap bab. Pemeriksaan akhir selalu menyertakan `checklist-editing.md` dan daftar "Pemeriksaan format sebelum selesai" di `format-dokumen.md`.
 
+## Alur kerja
+
+1. Baca aturan proyek pengguna bila ada, lalu tentukan jenis dokumen (proposal, buku TA, jurnal TA, slide).
+2. Buka berkas referensi sesuai tabel di atas: berkas isi untuk bagian yang dikerjakan dan bagian jenis dokumen di `format-dokumen.md`.
+3. Tulis atau periksa naskah. Untuk berkas `.docx`, ikuti `menerapkan-format-docx.md` dan jalankan `scripts/cek_format.py`.
+4. Laporkan ke pengguna: perubahan atau temuan beserta tag sumbernya, pertentangan yang ditemui beserta pilihan bawaan skill, dan hal yang belum diatur di mana pun.
+
+Pekerjaan selesai bila setiap aturan di berkas yang dibaca sudah diterapkan atau dilaporkan sebagai pertentangan, dan pemeriksaan akhir (`checklist-editing.md` serta "Pemeriksaan format sebelum selesai") sudah dijalankan untuk naskah yang akan diserahkan.
+
 ## Cara memakai aturan
 
-- Terapkan setiap aturan di berkas yang dibaca pada bagian yang sedang dikerjakan, lalu sebutkan tag sumbernya saat menjelaskan alasan perubahan kepada pengguna.
 - Sebut sesuatu "keputusan proyek" hanya setelah menemukan barisnya di aturan proyek. Aturan yang hanya ada di templat atau slide adalah bawaan skill. Hal yang tidak diatur di mana pun dilaporkan ke pengguna.
-- Format dokumen mengikuti templat kecuali aturan proyek menyatakan lain. Gaya bahasa mengikuti templat dan slide, lalu aturan proyek.
+- Format dan gaya bahasa mengikuti templat lalu slide, kecuali aturan proyek menyatakan lain.
 - Sebelum finalisasi dokumen, ingatkan pengguna menjalankan pemeriksaan kemiripan kampus bila diwajibkan.

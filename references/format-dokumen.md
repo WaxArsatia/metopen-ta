@@ -11,7 +11,7 @@ Sumber: `templates/Template Proposal FIF.docx` [TP], `templates/Template Buku TA
 
 Templat kadang memuat dua versi aturan: kalimat petunjuk di halaman, dan pengaturan yang benar-benar tertanam di docx (gaya, paragraf, bagian halaman).
 
-- [TP] dan [TB]: **format nyata menang**. Ikuti pengaturan docx. Bila suatu elemen tidak punya contoh terformat di templat (misalnya caption di [TP]), ikuti teks petunjuk dan laporkan ke pengguna.
+- [TP] dan [TB]: **format nyata menang**. Ikuti pengaturan docx, karena pengaturan itulah yang tercetak dan yang dilihat pemeriksa saat membuka templat, sedangkan teks petunjuk sering tertinggal dari revisi templat. Bila suatu elemen tidak punya contoh terformat di templat (misalnya caption di [TP]), ikuti teks petunjuk dan laporkan ke pengguna.
 - [TJ]: **teks petunjuk menang**. Pengaturan docx [TJ] adalah sisa konversi PDF (margin kanan 0,25 cm, kiri 0,78 cm, indentasi paragraf menambal), jadi angka margin dan spasi diambil dari teks. [TJ xml]
 - Setiap pertentangan yang ditemui dilaporkan ke pengguna beserta pilihan yang diambil. Daftar yang sudah diketahui ada di bagian "Pertentangan yang diketahui".
 
@@ -141,7 +141,7 @@ Laporkan butir yang relevan ke pengguna saat mengerjakan bagian terkait. Pilihan
 | 4 | [TP] daftar pustaka: teks "1 spasi dalam satu pustaka, 1,5 spasi antarpustaka" [TP hlm. 9]; contoh pustaka di templat berspasi 1,5 seperti isi [TP xml] | Laporkan; ikuti pilihan pengguna |
 | 5 | [TP] contoh pustaka "Ludeman, L. C., 1987, ..." bergaya penulis-tahun [TP hlm. 9]; [TB] mewajibkan IEEE [TB hlm. 39]; slide menganjurkan IEEE [W05 s67] | IEEE bernomor menurut kemunculan |
 | 6 | [TP] abstrak memuat "hipotesa awal" [TP hlm. 3]; Hipotesis di Bab 1 opsional [TP hlm. 5] | Ikuti keputusan proyek; bila tidak ada, tanyakan |
-| 7 | [TB] teks: Romawi di tengah bawah 2,5 cm, Arab di kanan atas 1,5 cm, halaman pertama bab di tengah bawah [TB hlm. 25-26]; templat: semua nomor di footer kanan bawah 1,25 cm, tanpa header [TB xml] | Footer kanan bawah (format nyata) |
+| 7 | [TB] teks: Romawi di tengah bawah 2,5 cm, Arab di kanan atas 1,5 cm, halaman pertama bab di tengah bawah [TB hlm. 25-26]; templat: semua nomor di footer kanan bawah 1,25 cm, tanpa header [TB xml] | Footer kanan bawah (format nyata; juga dipakai hampir semua TA terbit, lihat `pola-ta-terbit.md`) |
 | 8 | [TB] teks: nomenklatur tabel tebal + dua spasi [TB hlm. 27]; templat: "Tabel 1.1." + satu spasi, seluruh caption tebal [TB xml] | Format templat |
 | 9 | [TB] aturan catatan kaki (ibid, op. cit., loc. cit.) [TB hlm. 30-39] berdampingan dengan sitasi IEEE bernomor [TB hlm. 28-29] | Sitasi IEEE; catatan kaki hanya untuk keterangan tambahan |
 | 10 | [TJ] Daftar Pustaka: unsur "nama akhir, nama awal. tahun. judul. tempat. penerbit." dan urutan boleh menurut abjad [TJ hlm. 7, 9]; [TB] dan slide: IEEE urut kemunculan | Tanyakan ke pembimbing atau pengguna; bawaan IEEE |
