@@ -1,8 +1,8 @@
 # metopen-ta
 
-Skill agen AI yang memuat aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom University. Dipakai untuk menulis, merevisi, dan memeriksa proposal serta laporan Tugas Akhir (TA). Setiap aturan membawa tag sumber (misalnya `[W06 s15]`, deck W06 slide 15) yang menunjuk ke slide asli, jadi setiap saran bisa diperiksa.
+Skill agen AI yang memuat aturan metodologi penelitian dan tata tulis ilmiah dari materi kuliah Metopen FIF Telkom University, ditambah aturan format dari templat resmi FIF (Proposal, Buku TA, Jurnal TA). Dipakai untuk menulis, merevisi, memformat, dan memeriksa proposal serta laporan Tugas Akhir (TA). Setiap aturan membawa tag sumber (misalnya `[W06 s15]` untuk deck W06 slide 15, atau `[TB hlm. 25]` untuk halaman 25 templat Buku TA) yang menunjuk ke berkas asli, jadi setiap saran bisa diperiksa.
 
-*English: an agent skill that distills a university thesis-writing course (Telkom University, Informatics) into on-demand reference files with per-rule slide citations. Content is in Indonesian.*
+*English: an agent skill that distills a university thesis-writing course and the faculty's official proposal and thesis templates (Telkom University, Informatics) into on-demand reference files with per-rule source citations, plus a read-only .docx format checker. Content is in Indonesian.*
 
 ## Pasang
 
@@ -36,7 +36,7 @@ npx skills remove metopen-ta # hapus
 
 Catatan:
 - Pakai `WaxArsatia/metopen-ta` atau URL repo GitHub. Tautan langsung ke `SKILL.md` mentah hanya memasang `SKILL.md`, sehingga `references/` tidak ikut.
-- Pemasangan menyalin seluruh folder skill, termasuk `slides/` (sekitar 31 MB).
+- Pemasangan menyalin seluruh folder skill, termasuk `slides/` (sekitar 31 MB) dan `templates/` (sekitar 0,5 MB).
 - CLI mengirim data penggunaan anonim. Matikan dengan `DISABLE_TELEMETRY=1` atau `DO_NOT_TRACK=1`.
 - Opsi lengkap ada di [dokumentasi `skills add`](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
 
@@ -73,6 +73,10 @@ Menulis:
 - "Tulis Perumusan Masalah dan Tujuan dari topik ini, lalu cek apakah keduanya saling memetakan."
 - "Bantu tulis abstrak dari draf proposal ini, lengkap dengan kata kunci."
 
+Memformat:
+- "Atur margin, huruf, dan spasi proposal saya sesuai templat FIF, lalu cek dengan skrip pemeriksa."
+- "Nomor halaman buku TA FIF diletakkan di mana? Templatnya membingungkan."
+
 Memeriksa dan merevisi:
 - "Periksa Latar Belakang saya terhadap aturan Metopen. Tunjukkan bagian yang menyimpang beserta tag slidenya."
 - "Apakah Batasan Masalah saya sudah benar? Rasanya ada yang mengulang judul."
@@ -98,14 +102,19 @@ Sidang dan penyelesaian:
 ```
 metopen-ta/
 ├── SKILL.md       pintu masuk: urutan otoritas dan tabel "kerjakan X, baca Y"
-├── SUMBER.md      kode deck (W01 sampai W13) ke berkas slide, topik, dan cara memeriksa tag
-├── references/    8 berkas topik, dimuat sesuai kebutuhan
+├── SUMBER.md      kode deck (W01 sampai W13) dan templat (TP, TB, TJ) ke berkas, serta cara memeriksa tag
+├── references/    berkas topik, dimuat sesuai kebutuhan
+├── scripts/       cek_format.py, pemeriksa format .docx (hanya membaca)
 ├── slides/        salinan slide asli (12 berkas, sekitar 31 MB)
+├── templates/     salinan templat resmi FIF: Proposal, Buku TA, Jurnal TA
 └── README.md      berkas ini (untuk manusia, tidak dimuat agen)
 ```
 
 | Berkas di `references/` | Topik |
 |---|---|
+| `format-dokumen.md` | Format per templat (proposal, buku TA, jurnal TA), struktur bab, pertentangan templat |
+| `menerapkan-format-docx.md` | Cara menulis ke salinan templat .docx, skrip pemeriksa, render PDF |
+| `pola-ta-terbit.md` | Pola dari TA FIF yang sudah terbit (contoh, bukan aturan) |
 | `struktur-isi.md` | Isi dan urutan proposal atau laporan, jenis metode penelitian |
 | `judul-abstrak.md` | Judul, identitas penulis, abstrak, kata kunci |
 | `pendahuluan.md` | Latar Belakang, Perumusan Masalah, Batasan, Tujuan |
@@ -124,7 +133,15 @@ Skill memakai pemuatan bertahap (*progressive disclosure*) sesuai [spesifikasi A
 3. Agen membuka satu atau dua berkas `references/` sesuai bagian yang dikerjakan.
 4. `slides/` hanya dibuka saat sebuah tag perlu diperiksa. Cara memeriksanya ada di `SUMBER.md`.
 
-Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi prodi atau fakultas, lalu slide kuliah.
+Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi fakultas, lalu slide kuliah, lalu pola TA terbit. Di dalam templat Proposal dan Buku TA, pengaturan yang tertanam di docx menang atas kalimat petunjuknya (contoh: teks menyebut "1 spasi", paragraf diatur 1,5). Templat Jurnal TA dikecualikan karena docx-nya sisa konversi PDF; di sana teks petunjuk yang menang.
+
+## Pemeriksa format
+
+```bash
+python3 -I scripts/cek_format.py "Proposal.docx" --jenis proposal   # atau buku, jurnal
+```
+
+Skrip hanya membaca berkas. Laporannya memuat kertas, margin, huruf, ukuran, spasi, heading, caption, sisa teks templat, dan kata ganti orang pertama. Pemenggalan halaman tetap diperiksa dari render PDF (lihat `references/menerapkan-format-docx.md`).
 
 ## Menyimpan keputusan proyek sendiri
 
@@ -145,11 +162,14 @@ Keputusan proyek (menang atas slide):
 
 - Ringkasan bergantung pada ekstraksi teks dan pembacaan visual slide bergambar. Cocokkan dengan slide asli sebelum menjadikan aturan sebagai dasar keputusan penting.
 - Slide mengacu ke Template Laporan TA untuk laporan akhir. Untuk proposal, templat proposal fakultas dan aturan proyek Anda lebih tinggi derajatnya.
+- Templat di `templates/` adalah versi yang diperoleh penyusun pada 2026. Bila prodi menerbitkan versi baru, ganti berkasnya dan periksa ulang `references/format-dokumen.md`.
+- Pemeriksa format membaca XML, bukan tampilan. Huruf yang tidak terpasang dan medan caption bisa tampil berbeda di LibreOffice dan Word.
 - Memeriksa slide bergambar butuh LibreOffice dan `pdftoppm` (lihat `SUMBER.md`).
 
 ## Hak cipta dan lisensi
 
+- Templat di `templates/` milik Fakultas Informatika Universitas Telkom dan dibagikan kepada mahasiswa sebagai templat resmi. Hak ciptanya tetap pada fakultas.
 - Slide di `slides/` milik pengampu kelas dan Universitas Telkom. Penyusun repo memperoleh izin untuk membagikannya agar tag sumber bisa diperiksa tanpa berkas terpisah. Izin itu tidak mengalihkan hak cipta slide kepada penyusun repo atau pemakai repo.
 - Isi `references/` adalah ringkasan parafrase dari slide tersebut. Contoh judul, kutipan referensi, dan nama penulis di dalamnya berasal dari contoh di slide.
 - Repo ini bukan materi resmi universitas dan tidak mewakili pandangan universitas.
-- Repo belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Bila lisensi ditambahkan nanti, lisensi itu harus mengecualikan `slides/`.
+- Repo belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Bila lisensi ditambahkan nanti, lisensi itu harus mengecualikan `slides/` dan `templates/`.

@@ -12,6 +12,8 @@ Sumber: W12 (s4-9; s7-9 berupa gambar, ditranskripsi utuh) dan Tips (s2-10; s1 d
 
 ### 1. Format dan konsistensi
 
+Angka format (margin, huruf, ukuran, spasi, nomor halaman, caption) per jenis dokumen ada di `references/format-dokumen.md`; jalankan juga daftar "Pemeriksaan format sebelum selesai" di sana.
+
 Penulisan umum:
 - [ ] Font sesuai template kampus [W12 s7]
 - [ ] Ukuran font konsisten [W12 s7]
