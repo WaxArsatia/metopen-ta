@@ -1,6 +1,6 @@
 # Pola TA FIF yang sudah terbit
-Praktik teramati pada TA S1 FIF (Teknologi Informasi dan Informatika) yang terbit di Open Library Telkom University, sebagai contoh cara templat dipakai. Derajatnya paling bawah: templat dan slide menang. Pola yang bertentangan dengan templat dicatat sebagai pelanggaran yang perlu diperiksa, bukan sebagai izin.
-Sumber: `[OL]` = pembacaan abstrak dan Bab 1-3 delapan buku TA serta sepuluh artikel TA tahun 2025-2026, topik IoT, sensor, dan kompresi model (November 2026). Bab 4, Bab 5, dan daftar pustaka buku tidak dapat diunduh dengan akun mahasiswa, jadi tidak tercakup. Angka berupa sebaran pada sampel itu, bukan aturan.
+Praktik teramati pada TA S1 FIF (Teknologi Informasi dan Informatika) yang terbit di Open Library Telkom University, sebagai contoh cara templat dipakai. Derajatnya paling bawah: templat dan slide menang. Pola yang bertentangan dengan templat dicatat sebagai pelanggaran yang perlu diperiksa, bukan sebagai izin. Satu pengecualian: bagian "Pola TA satu pembimbing" menang atas preset `aturan-denis.md` pada butir yang berbeda, hanya bila pengguna memicu preset itu (lihat `SKILL.md`, Urutan otoritas).
+Sumber: `[OL]` = pembacaan abstrak dan Bab 1-3 delapan buku TA serta sepuluh artikel TA tahun 2025-2026, topik IoT, sensor, dan kompresi model (November 2026). Bab 4, Bab 5, dan daftar pustaka buku tidak dapat diunduh dengan akun mahasiswa, jadi tidak tercakup. Angka berupa sebaran pada sampel itu, bukan aturan. Sampel kedua (16 November 2026) dibahas di bagian "Pola TA satu pembimbing".
 
 ## Bentuk laporan
 
@@ -53,8 +53,35 @@ Sumber: `[OL]` = pembacaan abstrak dan Bab 1-3 delapan buku TA serta sepuluh art
 - TA kompresi atau model ringan melaporkan efisiensi di samping kinerja: ukuran model, jumlah parameter, waktu inferensi, rasio kompresi, memori. Pembanding utamanya model sebelum kompresi atau model dasar. [OL]
 - Waktu inferensi kadang diukur di komputer awan atau hos, bukan perangkat tepi, dan dinyatakan sebagai batasan. [OL]
 
+## Pola TA satu pembimbing (pembacaan 16 November 2026)
+
+Sampel kedua `[OL]`: abstrak, Bab 1, 2, 3, dan artikel tujuh TA S1 FIF bimbingan satu calon pembimbing yang sama (nama tidak dicantumkan). Delapan TA diperiksa, berkode 25.04.7062, 26.04.1885, 26.04.307, 26.04.3085, 26.04.3314, 26.04.3319, 26.04.3321, dan 26.04.3329. TA 26.04.3329 berupa gambar sehingga tidak terbaca otomatis. Semua angka di bagian ini dari tujuh TA yang terbaca.
+
+### Abstrak dan kata kunci
+
+- Bentuk: 5 dari 7 satu paragraf, 2 dari 7 empat subbagian berlabel. [OL]
+- Panjang 132 sampai 239 kata, dengan 3 dari 7 melampaui 200 kata. [OL]
+- Kata "Namun" memisahkan latar belakang dan masalah pada 3 dari 7 (26.04.3085 memakai "Meskipun"). [OL]
+- Pembuka kalimat tujuan: "Tujuan dari" pada 0 dari 7, "Penelitian ini mengusulkan" pada 6 dari 7. [OL]
+- Semua abstrak memuat hasil angka. [OL]
+- Kata kunci: 5 butir pada 4 dari 7, 6 butir pada 1, 7 butir pada 2. Gaya huruf kecil dan kepanjangan semua persis pada 26.04.3085, hampir pada 26.04.1885 (hanya "sensor IMU"). TA lain memakai singkatan atau kapital awal. [OL]
+
+### Bab 2 dan Bab 3
+
+- Bab 2 tidak memuat persamaan bernomor pada ketujuh TA. [OL]
+- Bab 3 panjang 4 sampai 11 halaman (median 8). [OL]
+- Gambar 3.1 berupa alur atau flowchart dan Gambar 3.2 berupa arsitektur sistem pada 6 dari 7 TA. Satu TA tidak punya caption gambar yang terdeteksi. [OL]
+- Pseudocode pada 3 dari 7 (26.04.307, 26.04.3085, 26.04.3314), selalu tepat satu, bernomor "Algoritma 1" atau "Algorithm 1" tanpa nomor bab. Isinya Input dan Output (atau Require dan Ensure), lalu langkah bernomor, sekitar 10 sampai 20 baris. Pseudocode 26.04.3085 jauh lebih panjang dan bergaya kode. [OL]
+- Persamaan bernomor (3.n) hanya di Bab 3: 11 pada 26.04.3321, 6 pada 26.04.3319, 3 pada 26.04.1885, dan sebagian tak bernomor pada 26.04.307 dan 26.04.3085. [OL]
+- Subbab "Metrik Evaluasi" berisi rumus (akurasi, presisi, *recall*, F1, latensi) pada beberapa TA. [OL]
+
+### Batasan Masalah
+
+- Jumlah butir: 3 (26.04.7062), 4 (26.04.307, 26.04.3314), 5 (26.04.1885), 6 (26.04.3085, 26.04.3321). Tidak ada yang 8. [OL]
+- Alasan per butir jarang tertulis. [OL]
+
 ## Cara memakai pola ini
 
 - Pakai sebagai contoh bentuk saat templat dan slide tidak mengatur (misalnya kolom tabel studi terkait atau isi Bab 3).
 - Saat sebuah pola menyimpang dari templat (Arial, kertas Letter, Hipotesis di buku, batasan tanpa alasan), ikuti templat dan sebut penyimpangan itu bila pengguna mencontoh TA terbit.
-- Pola khusus pembimbing tertentu, bila ada, disimpan di aturan proyek pengguna, bukan di skill ini.
+- Pola khusus pembimbing tertentu disimpan di bagian "Pola TA satu pembimbing" tanpa nama pembimbing. Pola yang lebih rinci, bila ada, disimpan di aturan proyek pengguna.

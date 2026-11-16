@@ -119,3 +119,6 @@ Sumber: W04 (slide 4-28, 30, 32-38) dan W05 (slide 4-5, 7-15, 17, 19-29). W04 s8
 - Tulis dengan huruf kecil, kecuali singkatan. [W05 s17]
 - Cantumkan istilah penting judul sebagai kata kunci, ditulis setelah abstrak. [W04 s18]
 - Contoh daftar: "attribute value extraction, question answering, generalization"; "Message stance, Twitter, rumours, semi-supervised, label propagation, label spreading". [W04 s22-23]
+
+## Catatan dari TA terbit
+- Sampel TA bimbingan satu pembimbing (16 November 2026) berbeda dari dua aturan di atas: abstrak lebih sering satu paragraf (5 dari 7) daripada empat paragraf atau subbagian [W05 s4], dan kata kunci umumnya memakai singkatan atau kapital awal, dengan hanya satu TA bergaya huruf kecil dan kepanjangan semua [W05 s17]. Sebarannya ada di `references/pola-ta-terbit.md`. Aturan slide di atas tetap berlaku tanpa pemicu "ikuti aturan denis". [OL]

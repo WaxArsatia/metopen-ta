@@ -61,6 +61,7 @@ Sumber: deck W06 (slide 4-5, 7, 9-18, 20-21, 23, 25, 27-28). Slide 11 dan 28 dib
 ### Uji ciri batasan
 - Ciri batasan yang sah: dapat dipakai sebagai butir Saran/Studi Lebih Lanjut (*Future Work*) di Kesimpulan, yaitu saran untuk TA berikutnya melonggarkan atau meniadakan batasan itu. [W06 s18]
 - Cek tiap butir batasan: (1) punya alasan? (2) tidak sudah tercermin di judul? (3) bukan pemilihan data/alat biasa? (4) bisa dijadikan saran pelonggaran? [W06 s15-18]
+- Catatan TA terbit: jumlah butir Batasan pada tujuh TA bimbingan satu pembimbing berkisar 3 sampai 6 dan alasan per butir jarang tertulis. Sebaran ada di `references/pola-ta-terbit.md`. Cek di atas tetap berlaku. [OL]
 
 ## Tujuan
 - Tujuan menerangkan apa yang hendak dihasilkan (misalnya sistem atau dataset) dan kondisi apa yang hendak dicapai. [W06 s20]

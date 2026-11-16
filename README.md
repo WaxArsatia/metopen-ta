@@ -114,7 +114,7 @@ metopen-ta/
 |---|---|
 | `format-dokumen.md` | Format per templat (proposal, buku TA, jurnal TA), struktur bab, pertentangan templat |
 | `menerapkan-format-docx.md` | Cara menulis ke salinan templat .docx, skrip pemeriksa, render PDF |
-| `pola-ta-terbit.md` | Pola dari TA FIF yang sudah terbit (contoh, bukan aturan) |
+| `pola-ta-terbit.md` | Pola dari TA FIF yang sudah terbit (contoh, bukan aturan), termasuk pola TA bimbingan satu pembimbing |
 | `struktur-isi.md` | Isi dan urutan proposal atau laporan, jenis metode penelitian |
 | `judul-abstrak.md` | Judul, identitas penulis, abstrak, kata kunci |
 | `pendahuluan.md` | Latar Belakang, Perumusan Masalah, Batasan, Tujuan |
@@ -123,7 +123,7 @@ metopen-ta/
 | `sitasi-parafrase.md` | Sitasi IEEE dan APA, jenis publikasi, parafrase |
 | `checklist-editing.md` | Penyuntingan dan pemeriksaan akhir |
 | `presentasi-sidang.md` | Slide dan persiapan sidang |
-| `aturan-denis.md` | Preset keputusan proyek TA (opsional), dipicu dengan "ikuti aturan denis" |
+| `aturan-denis.md` | Preset aturan generik dan keputusan proyek TA (opsional), dipicu dengan "ikuti aturan denis" |
 
 ## Cara kerja
 
@@ -134,7 +134,7 @@ Skill memakai pemuatan bertahap (*progressive disclosure*) sesuai [spesifikasi A
 3. Agen membuka satu atau dua berkas `references/` sesuai bagian yang dikerjakan.
 4. `slides/` hanya dibuka saat sebuah tag perlu diperiksa. Cara memeriksanya ada di `SUMBER.md`.
 
-Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi fakultas, lalu slide kuliah, lalu pola TA terbit. Di dalam templat Proposal dan Buku TA, pengaturan yang tertanam di docx menang atas kalimat petunjuknya (contoh: teks menyebut "1 spasi", paragraf diatur 1,5). Templat Jurnal TA dikecualikan karena docx-nya sisa konversi PDF; di sana teks petunjuk yang menang.
+Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi fakultas, lalu slide kuliah, lalu pola TA terbit. Pemicu "ikuti aturan denis" menambah satu penyesuaian: pada butir yang diatur preset dan berbeda dari praktik TA terbit, praktik TA terbit menang atas preset. Di dalam templat Proposal dan Buku TA, pengaturan yang tertanam di docx menang atas kalimat petunjuknya (contoh: teks menyebut "1 spasi", paragraf diatur 1,5). Templat Jurnal TA dikecualikan karena docx-nya sisa konversi PDF; di sana teks petunjuk yang menang.
 
 ## Pemeriksa format
 
@@ -161,7 +161,7 @@ Keputusan proyek (menang atas slide):
 
 ## Preset "aturan Denis" (opsional)
 
-Selain keputusan sendiri, skill menyertakan satu preset keputusan proyek TA dari penyusun: `references/aturan-denis.md`. Isinya struktur Latar Belakang, pasangan Rumusan Masalah dan Tujuan (kata kerja Bloom), aturan sitasi, gaya tulis, dan daftar "Siap diserahkan". Data pribadi diganti kolom `[ISI: ...]`.
+Selain keputusan sendiri, skill menyertakan satu preset keputusan proyek TA dari penyusun: `references/aturan-denis.md`. Isinya prinsip otoritas, format dan tata letak, struktur Latar Belakang, pasangan Rumusan Masalah dan Tujuan (kata kerja Bloom), Batasan Masalah, aturan sitasi, abstrak dan kata kunci, isi Bab 2 dan Bab 3, metrik, gaya tulis, dan daftar "Siap diserahkan". Data pribadi diganti kolom `[ISI: ...]`.
 
 Dua cara memakainya, berlaku untuk agen apa pun yang mendukung Agent Skills:
 
@@ -174,7 +174,7 @@ Untuk pekerjaan proposal atau TA, ikuti aturan Denis: baca `references/aturan-de
 di skill `metopen-ta`, terapkan sebagai aturan proyek, dan tanyakan kolom [ISI: ...] yang kosong.
 ```
 
-Preset bersifat pilihan. Aturan proyek tertulis milik Anda menang atas preset, dan preset menang atas templat dan slide.
+Preset bersifat pilihan. Aturan proyek tertulis milik Anda menang atas preset, dan preset menang atas templat dan slide. Pengecualiannya butir yang berbeda dari praktik TA terbit di `references/pola-ta-terbit.md`: praktik itu menang, dan agen melaporkan daftar butirnya sebelum membalik keputusan yang tercatat di preset.
 
 ## Batasan
 

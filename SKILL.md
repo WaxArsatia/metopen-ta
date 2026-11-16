@@ -14,13 +14,15 @@ Saat dua sumber bertentangan, yang lebih atas menang:
 3. Slide kuliah.
 4. Pola TA terbit (`references/pola-ta-terbit.md`): praktik teramati sebagai contoh, bukan aturan.
 
+Dengan pemicu "ikuti aturan denis" (bagian berikut), satu penyesuaian berlaku: pada butir yang diatur preset dan berbeda dari praktik TA terbit bimbingan calon pembimbing, praktik TA terbit berada di atas preset (keputusan pengguna 2026-11-16). Butir lain tetap mengikuti urutan di atas. Tanpa pemicu, urutan di atas berlaku apa adanya.
+
 Baca aturan proyek lebih dulu bila ada. Pertentangan antara slide, templat, dan aturan proyek dilaporkan ke pengguna beserta pilihan bawaan skill, juga saat pengguna meminta mengikuti slide sepenuhnya. Sarankan mencatat keputusan pengguna di aturan proyek.
 
 ## Aturan Denis (pemicu opsional)
 
-Pengguna yang menulis "ikuti aturan denis" meminta preset keputusan proyek di `references/aturan-denis.md`. Preset ini menempati peringkat 1 di atas, kecuali pengguna sudah punya berkas aturan proyek yang bertentangan dengannya: berkas itu menang.
+Pengguna yang menulis "ikuti aturan denis" meminta preset keputusan proyek di `references/aturan-denis.md`. Preset ini menempati peringkat 1 di atas, kecuali pengguna sudah punya berkas aturan proyek yang bertentangan dengannya (berkas itu menang) dan kecuali butir yang berbeda dari praktik TA terbit (praktik itu menang, lihat "Prinsip otoritas" di preset).
 
-1. Baca `references/aturan-denis.md` penuh, lalu terapkan isinya selama sesi.
+1. Baca `references/aturan-denis.md` penuh dan bagian "Pola TA satu pembimbing" di `references/pola-ta-terbit.md`, lalu terapkan isinya selama sesi. Bila menerapkan pola itu membalik keputusan yang tercatat di preset, daftar butirnya dilaporkan ke pengguna sebelum mengubah apa pun.
 2. Kolom `[ISI: ...]` kosong yang dibutuhkan tugas saat ini ditanyakan ke pengguna sekaligus, sebelum menulis. Kolom bertulisan "bawaan" memakai nilai bawaan bila pengguna tidak menjawab. Bagian "Keputusan format dan laporan" dikonfirmasi satu kali di awal sesi.
 3. Setelah kolom terisi, tawarkan menyimpannya ke berkas instruksi proyek yang dibaca agen ini (AGENTS.md, CLAUDE.md, atau sejenisnya), supaya pemicu tidak perlu diulang.
 4. Daftar "Siap diserahkan" di akhir preset ditambahkan pada pemeriksaan akhir skill (`checklist-editing.md` dan "Pemeriksaan format sebelum selesai"). Keduanya dijalankan saat naskah dinyatakan selesai.

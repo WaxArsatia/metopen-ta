@@ -70,6 +70,6 @@ unzip -p "templates/Template Buku TA FIF.docx" word/styles.xml | grep -o '<w:sty
 
 ## Pola TA terbit (tag OL)
 
-`[OL]` di `references/pola-ta-terbit.md` menunjuk pembacaan TA S1 FIF 2025-2026 di Open Library Telkom University (openlibrary.telkomuniversity.ac.id), November 2026. Berkas itu hanya memuat pola agregat tanpa rincian per TA. Untuk memeriksa, buka katalog Open Library, saring jenis "Skripsi" dan program studi FIF, lalu baca abstrak dan Bab 1-3 beberapa TA terbaru.
+`[OL]` di `references/pola-ta-terbit.md` menunjuk pembacaan TA S1 FIF 2025-2026 di Open Library Telkom University (openlibrary.telkomuniversity.ac.id), November 2026. Berkas itu memuat pola agregat. Bagian "Pola TA satu pembimbing" memuat sampel kedua (16 November 2026): abstrak, Bab 1-3, dan artikel tujuh TA bimbingan satu calon pembimbing, dengan kode katalog TA pada temuan tertentu. Untuk memeriksa, buka katalog Open Library, saring jenis "Skripsi" dan program studi FIF, lalu baca abstrak dan Bab 1-3 beberapa TA terbaru.
 
 Catatan penggunaan: slide mengacu ke Template Laporan TA FIF untuk laporan akhir, sedangkan proposal memakai templat proposal fakultas. Templat menang atas slide; aturan proyek pengguna menang atas keduanya.
