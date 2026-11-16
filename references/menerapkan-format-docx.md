@@ -35,5 +35,5 @@ pdftoppm -r 60 -png OUT/BERKAS.pdf OUT/hlm   # lalu lihat setiap halaman
 ## Jebakan render LibreOffice
 
 - Caption bermedan `STYLEREF 1 \s` + `SEQ` (gaya [TB]) tampil sebagai "Tabel PENDAHULUAN.1" di LibreOffice, padahal di Word tampil "Tabel 1.1". Bila PDF dibangun dengan LibreOffice, pakai nomor caption statis atau periksa hasilnya di Word.
-- Times New Roman dan Aptos harus terpasang. Tanpa itu LibreOffice memakai huruf pengganti, sehingga pemenggalan baris dan halaman berbeda dari Word. Periksa dengan `fc-list | grep -i "times new roman"` dan `pdffonts`.
+- Times New Roman, Aptos, dan Calibri (huruf bawaan dokumen [TP], dipakai nomor halaman) harus terpasang. Tanpa itu LibreOffice memakai huruf pengganti, sehingga pemenggalan baris dan halaman berbeda dari Word. Periksa dengan `fc-list | grep -i "times new roman"` dan `pdffonts`.
 - Medan Daftar Isi, Daftar Gambar, dan Daftar Tabel tidak diperbarui otomatis saat konversi. Perbarui di Word, atau tulis ulang nomor halamannya dari PDF.

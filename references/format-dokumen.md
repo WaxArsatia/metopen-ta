@@ -33,7 +33,7 @@ Templat kadang memuat dua versi aturan: kalimat petunjuk di halaman, dan pengatu
 ### Halaman awal dan penomoran
 - Sampul: judul TNR 16 pt tebal; "Proposal Tugas Akhir", kelas mata kuliah, NIM, dan nama 12 pt tebal; prodi, fakultas, universitas, kota, dan tahun 16 pt tebal; semua rata tengah. [TP xml; TP hlm. 1]
 - Lembar Persetujuan: judul Indonesia, judul Inggris, NIM, dan nama 14 pt tebal; kalimat pengajuan dan blok tanda tangan calon pembimbing 1 dan 2 (nama lengkap bergelar, NIP) 12 pt. [TP xml; TP hlm. 2]
-- Sampul berada di bagian halaman sendiri tanpa nomor. Nomor Arab dimulai dari 1 pada Lembar Persetujuan, di footer kanan bawah. [TP xml]
+- Sampul berada di bagian halaman sendiri tanpa nomor. Nomor Arab dimulai dari 1 pada Lembar Persetujuan, di footer kanan bawah. Nomor halaman memakai gaya Footer tanpa format langsung, jadi tampil dengan huruf bawaan dokumen (Calibri 11 pt). [TP xml]
 - Setiap bagian utama (Lembar Persetujuan, Abstrak, tiap bab, Daftar Pustaka, Lampiran) dimulai di halaman baru dengan pemisah halaman. [TP xml]
 
 ### Struktur isi
