@@ -1,6 +1,6 @@
 ---
 name: metopen-ta
-description: "Aturan Metopen dan templat resmi FIF Telkom University untuk Tugas Akhir (TA, skripsi), bertag sumber. Pakai setiap kali menulis, merevisi, memformat, atau memeriksa proposal TA, buku TA, jurnal TA, atau slide sidang, juga saat pengguna hanya menyebut bab, bagian, atau berkas .docx TA tanpa menyebut Metopen atau templat: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
+description: "Aturan Metopen dan templat resmi FIF Telkom University untuk Tugas Akhir (TA, skripsi), bertag sumber. Pakai juga saat pengguna menulis \"ikuti aturan denis\". Pakai setiap kali menulis, merevisi, memformat, atau memeriksa proposal TA, buku TA, jurnal TA, atau slide sidang, juga saat pengguna hanya menyebut bab, bagian, atau berkas .docx TA tanpa menyebut Metopen atau templat: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
 ---
 
 Pengetahuan metopen dan templat FIF, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber: `[W06 s15]` untuk slide (deck W06, slide 15), `[TP hlm. 6]`, `[TB hlm. 25]`, `[TJ hlm. 4]` untuk templat Proposal, Buku TA, dan Jurnal TA (halaman PDF hasil render), dan `[TB xml]` untuk fakta dari pengaturan di dalam docx. Peta tag ke berkas dan cara memeriksanya ada di `SUMBER.md`.
@@ -15,6 +15,15 @@ Saat dua sumber bertentangan, yang lebih atas menang:
 4. Pola TA terbit (`references/pola-ta-terbit.md`): praktik teramati sebagai contoh, bukan aturan.
 
 Baca aturan proyek lebih dulu bila ada. Pertentangan antara slide, templat, dan aturan proyek dilaporkan ke pengguna beserta pilihan bawaan skill, juga saat pengguna meminta mengikuti slide sepenuhnya. Sarankan mencatat keputusan pengguna di aturan proyek.
+
+## Aturan Denis (pemicu opsional)
+
+Pengguna yang menulis "ikuti aturan denis" meminta preset keputusan proyek di `references/aturan-denis.md`. Preset ini menempati peringkat 1 di atas, kecuali pengguna sudah punya berkas aturan proyek yang bertentangan dengannya: berkas itu menang.
+
+1. Baca `references/aturan-denis.md` penuh, lalu terapkan isinya selama sesi.
+2. Setiap kolom `[ISI: ...]` yang kosong ditanyakan ke pengguna. Nilai bawaan hanya dipakai bila tertulis "bawaan".
+3. Setelah kolom terisi, tawarkan menyimpannya ke berkas instruksi proyek yang dibaca agen ini (AGENTS.md, CLAUDE.md, atau sejenisnya), supaya pemicu tidak perlu diulang.
+4. Daftar "Siap diserahkan" di akhir preset menggantikan butir penyelesaian di bawah untuk naskah yang akan diserahkan.
 
 ## Penunjuk: kerjakan X, baca Y
 

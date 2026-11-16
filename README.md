@@ -123,6 +123,7 @@ metopen-ta/
 | `sitasi-parafrase.md` | Sitasi IEEE dan APA, jenis publikasi, parafrase |
 | `checklist-editing.md` | Penyuntingan dan pemeriksaan akhir |
 | `presentasi-sidang.md` | Slide dan persiapan sidang |
+| `aturan-denis.md` | Preset keputusan proyek TA (opsional), dipicu dengan "ikuti aturan denis" |
 
 ## Cara kerja
 
@@ -145,7 +146,7 @@ Skrip hanya membaca berkas. Laporannya memuat kertas, margin, huruf, ukuran, spa
 
 ## Menyimpan keputusan proyek sendiri
 
-Skill ini sengaja umum. Keputusan khusus Anda (struktur bab dari templat prodi, bagian yang dibuang, batas referensi, gaya sitasi) jangan diubah di sini. Catat di `CLAUDE.md` atau `AGENTS.md` proyek Anda, karena aturan proyek menang atas slide.
+Skill ini sengaja umum, dan satu-satunya bagian berisi keputusan proyek adalah preset opsional di bawah. Keputusan khusus Anda (struktur bab dari templat prodi, bagian yang dibuang, batas referensi, gaya sitasi) jangan diubah di sini. Catat di `CLAUDE.md` atau `AGENTS.md` proyek Anda, karena aturan proyek menang atas slide.
 
 Contoh catatan di `CLAUDE.md` proyek:
 
@@ -157,6 +158,23 @@ Keputusan proyek (menang atas slide):
 - Tanpa bagian Hipotesis.
 - Sitasi IEEE bernomor.
 ```
+
+## Preset "aturan Denis" (opsional)
+
+Selain keputusan sendiri, skill menyertakan satu preset keputusan proyek TA dari penyusun: `references/aturan-denis.md`. Isinya struktur Latar Belakang, pasangan Rumusan Masalah dan Tujuan (kata kerja Bloom), aturan sitasi, gaya tulis, dan daftar "Siap diserahkan". Data pribadi diganti kolom `[ISI: ...]`.
+
+Dua cara memakainya, berlaku untuk agen apa pun yang mendukung Agent Skills:
+
+1. **Sekali pakai.** Tulis di percakapan: `ikuti aturan denis`. Agen membaca preset, menanyakan kolom yang kosong, lalu menerapkannya selama sesi.
+2. **Permanen.** Tempel instruksi berikut ke berkas instruksi proyek yang dibaca agen Anda (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, atau pengaturan instruksi kustom):
+
+```markdown
+## Aturan TA
+Untuk pekerjaan proposal atau TA, ikuti aturan Denis: baca `references/aturan-denis.md`
+di skill `metopen-ta`, terapkan sebagai aturan proyek, dan tanyakan kolom [ISI: ...] yang kosong.
+```
+
+Preset bersifat pilihan. Aturan proyek tertulis milik Anda menang atas preset, dan preset menang atas templat dan slide.
 
 ## Batasan
 
