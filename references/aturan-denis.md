@@ -17,7 +17,7 @@ Keputusan di berkas ini menang atas templat dan slide. Konflik antara slide dan 
 
 - Praktik TA terbit bimbingan calon pembimbing menang atas aturan di berkas ini pada butir yang berbeda. Praktik itu terbaca dari abstrak, Bab 1 sampai 3, dan artikel TA yang sama, dan tercatat di bagian "Pola TA satu pembimbing" di `references/pola-ta-terbit.md` [OL].
 - Prinsip ini berlaku per butir. Butir yang tidak dibahas pola itu tetap mengikuti berkas ini, lalu templat, lalu slide.
-- Menang tidak berarti otomatis mengubah. Bila penerapan pola membalik keputusan yang sudah tercatat di berkas ini, agen melaporkan daftar butirnya ke pengguna sebelum mengubah apa pun. Contoh butir yang sudah diketahui berbeda: nama metode di Perumusan Masalah, Tujuan berbentuk butir, dan alasan per butir Batasan. Daftar ini tidak lengkap.
+- Menang tidak berarti otomatis mengubah. Bila penerapan pola membalik keputusan yang sudah tercatat di berkas ini, agen melaporkan daftar butirnya ke pengguna sebelum mengubah apa pun. Lima perbedaan sudah ditinjau pada 2026-11-16 dan preset tetap menang, jadi tidak perlu dilaporkan lagi: (1) Perumusan Masalah tanpa nama metode, (2) Latar Belakang 3 sampai 4 sitasi dengan satu penanda per sumber, (3) Bab 2 lebih panjang dari Bab 1, (4) alasan wajib pada setiap butir Batasan, dan (5) tanpa tabel keterkaitan Tujuan, Pengujian, dan Kesimpulan. Perbedaan lain yang belum ditinjau tetap dilaporkan dulu.
 - Pola di `pola-ta-terbit.md` berasal dari TA bimbingan satu calon pembimbing. Bila calon pembimbing 1 pengguna berbeda, konfirmasi dulu apakah pola itu berlaku.
 - Setiap butir di bawah yang berasal dari TA terbit menyebut sebarannya. Butir yang hanya mewakili minoritas sampel dicatat sebagai gaya satu TA, bukan sebagai kebiasaan umum.
 
@@ -81,7 +81,7 @@ Angka dan cara pengaturannya ada di `format-dokumen.md` dan `menerapkan-format-d
 
 Ketentuan ini menggantikan butir lama "tiga paragraf".
 
-- Abstrak proposal berupa satu paragraf tanpa judul subbagian, maksimal 200 kata, tanpa sitasi, dengan lima unsur berurutan:
+- Abstrak proposal berupa satu paragraf tanpa judul subbagian, maksimal 200 kata, tanpa sitasi, tanpa hipotesa awal (walaupun templat menyebutnya), dengan lima unsur berurutan:
   1. Latar belakang, 1 kalimat.
   2. Masalah, 1 kalimat yang diawali "Namun,".
   3. Tujuan, 1 kalimat yang diawali "Tugas Akhir ini mengusulkan".
@@ -116,6 +116,11 @@ Ketentuan ini menggantikan butir lama "tiga paragraf".
   - Persamaan bernomor "(3.n)" rata kanan di subbab metrik dan praproses, dengan penjelasan setiap simbol.
 - Dasar dari TA terbit [OL]: Gambar 3.1 berupa alur dan Gambar 3.2 berupa arsitektur sistem pada 6 dari 7 TA; satu algoritma bernomor tanpa nomor bab pada 3 dari 7; persamaan bernomor (3.n) hanya di Bab 3, tidak pernah di Bab 2.
 
+## Slide proposal
+
+- Slide proposal mengikuti isi proposal tanpa hasil dan kesimpulan, dengan aturan tampilan W13 (`references/presentasi-sidang.md`).
+- Daftar 10 slide TA di W13 hanya panduan. Contoh rumusan dan tujuan di slide tidak ditiru. Diagram metodologi di slide hanya untuk slide, sedangkan diagram alur dan arsitektur di Bab 3 tetap ada sebagai pengecualian yang tercatat di bagian Bab 3.
+
 ## Metrik
 
 - Metrik didefinisikan sekali dan dipakai konsisten: [ISI: definisi, misalnya F1 makro sebagai rerata F1 setiap kelas dan akurasi seimbang sebagai rerata *recall* setiap kelas].
@@ -140,5 +145,6 @@ Dokumen siap bila semua ini benar:
 - Setiap rumusan punya satu Tujuan dan satu skenario Bab 3 bernomor sama.
 - Setiap [n] punya entri, setiap entri dirujuk, dan jumlah referensi memenuhi syarat.
 - Setiap tabel dan gambar dirujuk di teks, caption di posisi yang benar, dan pemenggalan halaman sudah dilihat di PDF.
-- Abstrak maksimal 200 kata dengan 5 kata kunci, Batasan Masalah 3 sampai 6 butir beralasan, dan butir preset yang berbeda dari TA terbit sudah dilaporkan.
+- Abstrak maksimal 200 kata dengan 5 kata kunci, dan Batasan Masalah 3 sampai 6 butir beralasan.
+- Perbedaan antara preset dan TA terbit yang belum ditinjau (di luar lima yang tercatat di "Prinsip otoritas") sudah dilaporkan ke pengguna.
 - Pengguna sudah diingatkan menjalankan pemeriksaan kemiripan kampus bila diwajibkan.
