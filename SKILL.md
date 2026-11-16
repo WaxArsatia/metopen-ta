@@ -21,9 +21,9 @@ Baca aturan proyek lebih dulu bila ada. Pertentangan antara slide, templat, dan 
 Pengguna yang menulis "ikuti aturan denis" meminta preset keputusan proyek di `references/aturan-denis.md`. Preset ini menempati peringkat 1 di atas, kecuali pengguna sudah punya berkas aturan proyek yang bertentangan dengannya: berkas itu menang.
 
 1. Baca `references/aturan-denis.md` penuh, lalu terapkan isinya selama sesi.
-2. Setiap kolom `[ISI: ...]` yang kosong ditanyakan ke pengguna. Nilai bawaan hanya dipakai bila tertulis "bawaan".
+2. Kolom `[ISI: ...]` kosong yang dibutuhkan tugas saat ini ditanyakan ke pengguna sekaligus, sebelum menulis. Kolom bertulisan "bawaan" memakai nilai bawaan bila pengguna tidak menjawab. Bagian "Keputusan format dan laporan" dikonfirmasi satu kali di awal sesi.
 3. Setelah kolom terisi, tawarkan menyimpannya ke berkas instruksi proyek yang dibaca agen ini (AGENTS.md, CLAUDE.md, atau sejenisnya), supaya pemicu tidak perlu diulang.
-4. Daftar "Siap diserahkan" di akhir preset menggantikan butir penyelesaian di bawah untuk naskah yang akan diserahkan.
+4. Daftar "Siap diserahkan" di akhir preset ditambahkan pada pemeriksaan akhir skill (`checklist-editing.md` dan "Pemeriksaan format sebelum selesai"). Keduanya dijalankan saat naskah dinyatakan selesai.
 
 ## Penunjuk: kerjakan X, baca Y
 
