@@ -19,7 +19,7 @@ Sumber: `[OL]` = pembacaan abstrak dan Bab 1-3 delapan buku TA serta sepuluh art
 ## Pendahuluan
 
 - Rumusan Masalah: kalimat tanya pada semua sampel, umumnya "Bagaimana ...", didahului kalimat pengantar, tiga butir bernomor. [OL]
-- Banyak rumusan memuat nama metode. Itu berbenturan dengan aturan Pendahuluan di slide (bagaimana-nya tidak di Pendahuluan, [W06 s4]) dan dengan aturan proyek yang melarang solusi di rumusan; ikuti aturan yang lebih tinggi derajatnya.
+- Banyak rumusan memuat nama metode. Itu berbenturan dengan aturan Pendahuluan di slide (bagaimana-nya tidak di Pendahuluan, [W06 s4]) dan dengan aturan proyek bila proyek melarang solusi di rumusan; ikuti aturan yang lebih tinggi derajatnya.
 - Tujuan: separuh sampel berupa daftar bernomor berkata kerja (menganalisis, mengevaluasi, membandingkan), separuh narasi. Templat buku dan gaya jurnal TA meminta narasi. Tujuan yang baik menyebut metriknya (akurasi, F1, MAE, RMSE, waktu inferensi). [OL]
 - Tabel keterkaitan Tujuan, Pengujian, Kesimpulan dipakai sebagian TA; kolom Kesimpulan yang paling informatif berisi hasil angka. [OL]
 - Manfaat ditulis sebagai paragraf narasi. [OL]

@@ -162,13 +162,13 @@ Keputusan proyek (menang atas slide):
 
 - Ringkasan bergantung pada ekstraksi teks dan pembacaan visual slide bergambar. Cocokkan dengan slide asli sebelum menjadikan aturan sebagai dasar keputusan penting.
 - Slide mengacu ke Template Laporan TA untuk laporan akhir. Untuk proposal, templat proposal fakultas dan aturan proyek Anda lebih tinggi derajatnya.
-- Templat di `templates/` adalah versi yang diperoleh penyusun pada 2026. Bila prodi menerbitkan versi baru, ganti berkasnya dan periksa ulang `references/format-dokumen.md`.
+- Templat di `templates/` adalah versi yang diperoleh penyusun pada 2024-2025. Bila prodi menerbitkan versi baru, ganti berkasnya dan periksa ulang `references/format-dokumen.md`.
 - Pemeriksa format membaca XML, bukan tampilan. Huruf yang tidak terpasang dan medan caption bisa tampil berbeda di LibreOffice dan Word.
 - Memeriksa slide bergambar butuh LibreOffice dan `pdftoppm` (lihat `SUMBER.md`).
 
 ## Hak cipta dan lisensi
 
-- Templat di `templates/` milik Fakultas Informatika Universitas Telkom dan dibagikan kepada mahasiswa sebagai templat resmi. Hak ciptanya tetap pada fakultas.
+- Templat di `templates/` adalah salinan yang diperoleh penyusun dari program studi pada 2024-2025, bukan unduhan dari situs resmi. Portal resmi fakultas (SONIA) memuat templat gaya jurnal TA; versi docx proposal dan buku TA ini tidak ditemukan di situs publik. Struktur templat buku sejalan dengan TA S1 FIF yang terbit 2025-2026. Hak cipta templat tetap pada Fakultas Informatika Universitas Telkom.
 - Slide di `slides/` milik pengampu kelas dan Universitas Telkom. Penyusun repo memperoleh izin untuk membagikannya agar tag sumber bisa diperiksa tanpa berkas terpisah. Izin itu tidak mengalihkan hak cipta slide kepada penyusun repo atau pemakai repo.
 - Isi `references/` adalah ringkasan parafrase dari slide tersebut. Contoh judul, kutipan referensi, dan nama penulis di dalamnya berasal dari contoh di slide.
 - Repo ini bukan materi resmi universitas dan tidak mewakili pandangan universitas.

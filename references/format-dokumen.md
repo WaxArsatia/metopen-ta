@@ -43,7 +43,7 @@ Templat kadang memuat dua versi aturan: kalimat petunjuk di halaman, dan pengatu
 - Bab 3: pilih judul "Perancangan Sistem" (diagram blok atau *flowchart* beserta penjelasan, rencana kebutuhan data, praproses, skenario pengujian) atau "Alur Pemodelan" (alur pembuatan model, tahapan menurut metode, metode dan skenario pengujian). [TP hlm. 8]
 - Daftar Pustaka: minimal 10 referensi, semuanya diacu di teks; minimal 3 referensi yang menjadi dasar gap berasal dari 5 tahun terakhir dan terbit di jurnal terindeks Scopus/WoS dan/atau SINTA 1 atau 2; bernomor menurut urutan kemunculan di teks. [TP hlm. 9]
 - Lampiran: data pendukung, CV pembimbing dari luar Telkom University. [TP hlm. 10]
-- Subbab petunjuk "Percetakan Proposal Tugas Akhir" dan "Kaidah Penulisan" di Bab 2 templat adalah panduan bagi penulis. Ganti dengan isi kajian pustaka, jangan dipertahankan.
+- Subbab "Percetakan Proposal Tugas Akhir" dan "Kaidah Penulisan" di Bab 2 templat berisi petunjuk bagi penulis, bukan isi. Bawaan skill: ganti dengan isi kajian pustaka, lalu terapkan aturannya ke seluruh naskah.
 
 ### Kaidah bahasa [TP hlm. 6-7]
 - Bahasa Indonesia baku dengan kalimat utuh, singkat, dan jelas, mengikuti kelaziman disiplin ilmu.

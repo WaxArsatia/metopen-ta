@@ -43,7 +43,7 @@ W01 sudah berupa PDF, jadi cukup `pdftoppm -r 70 -png -f 51 -l 51 "slides/Week 0
 
 ## Templat resmi (tag TP, TB, TJ)
 
-Salinan templat resmi FIF ada di `templates/`. Templat milik Fakultas Informatika Universitas Telkom dan dibagikan kepada mahasiswa; salinan disertakan agar tag bisa diperiksa.
+Salinan templat FIF ada di `templates/`, diperoleh penyusun dari program studi pada 2024-2025 dan disertakan agar tag bisa diperiksa. Versi docx proposal dan buku TA tidak ditemukan di situs publik fakultas; portal SONIA memuat templat gaya jurnal TA. Hak cipta templat pada Fakultas Informatika Universitas Telkom.
 
 | Kode | Berkas di `templates/` | Dipakai untuk | Dirangkum di |
 |---|---|---|---|
