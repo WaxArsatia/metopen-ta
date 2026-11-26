@@ -21,16 +21,20 @@ Sumber: pengamatan langsung pada `templates/*.docx` (2026-11), kecuali yang dibe
 
 ## Pemeriksaan
 
+Satu perintah dari folder skill membangun PDF di samping docx, lalu menjalankan semua pemeriksaan berikut:
+
 ```bash
-python3 -I scripts/cek_format.py "BERKAS.docx" --jenis proposal   # atau buku, jurnal
-soffice --headless --convert-to pdf --outdir OUT "BERKAS.docx"
-pdffonts OUT/BERKAS.pdf                      # huruf pengganti (Noto, DejaVu, Liberation) tanda huruf tidak terpasang
-pdftoppm -r 60 -png OUT/BERKAS.pdf OUT/hlm   # lalu lihat setiap halaman
+scripts/bangun_pdf.sh "BERKAS.docx" proposal [FOLDER_KERJA]   # jenis: proposal, buku, jurnal
 ```
 
-- Jalankan `cek_format.py` dari folder skill. Skrip hanya membaca berkas dan melaporkan kertas, margin, huruf, ukuran, spasi, heading, caption, sisa templat, dan kata ganti orang pertama. Sampul, lembar pengesahan, paragraf rata tengah, dan isi tabel tidak dinilai sebagai isi. Kode keluar 1 berarti ada temuan; nilai setiap temuan dengan konteksnya.
-- Halaman PDF diperiksa satu per satu: judul atau kalimat pengantar tidak tertinggal di dasar halaman, tabel tidak terbelah, nomor halaman sesuai jenis dokumen, gambar terbaca.
-- Pemeriksaan dianggap selesai bila setiap temuan skrip sudah diperbaiki atau dijelaskan, dan setiap halaman PDF sudah dilihat.
+Keluarannya berurutan: huruf yang dipakai PDF (`pdffonts`; Noto, DejaVu, atau Liberation berarti huruf pengganti), laporan `cek_format.py`, baris pertama dan terakhir tiap halaman, lalu lembar kontak (6 halaman per gambar, 50 dpi) di FOLDER_KERJA.
+
+- `cek_format.py` membaca berkas dan melaporkan kertas, margin, huruf, ukuran, spasi, heading, caption, sisa templat, kata ganti orang pertama, dan kelompok `isi: ...` (tanda pisah, sitasi dan Daftar Pustaka, jumlah rumusan dan Tujuan, kata kerja Bloom, jumlah Batasan, abstrak dan kata kunci, rujukan tabel dan gambar). Sampul, lembar pengesahan, paragraf rata tengah, dan isi tabel tidak dinilai sebagai isi. Kode keluar 1 berarti ada temuan; nilai setiap temuan dengan konteksnya.
+- Pemenggalan halaman dibaca dari daftar baris pertama dan terakhir: judul atau kalimat pengantar yang tertinggal di dasar halaman tampak di sana tanpa membuka gambar.
+- Lembar kontak dilihat sekali untuk tabel, gambar, dan nomor halaman. Halaman yang meragukan diperbesar satu per satu (`pdftoppm -r 100 -f N -l N`); membaca ulang seluruh gambar setelah tiap perubahan kecil memboroskan konteks.
+- Pemeriksaan dianggap selesai bila setiap temuan skrip sudah diperbaiki atau dijelaskan, dan lembar kontak sudah dilihat.
+
+Shell di mesin ini zsh: pola glob yang tidak cocok menggagalkan perintah (`no matches found`), jadi uji dengan `ls` atau `find` lebih dulu. Perintah berspasi tidak disimpan di variabel, dan nama fungsi `g` bentrok dengan alias.
 
 ## Jebakan render LibreOffice
 

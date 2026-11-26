@@ -5,6 +5,8 @@ Pemakaian:
     python3 -I scripts/cek_format.py BERKAS.docx --jenis proposal|buku|jurnal
 
 Hanya membaca berkas. Laporan berisi temuan per kelompok; kode keluar 1 bila ada temuan.
+Kelompok "isi: ..." memeriksa aturan isi yang bisa dihitung: tanda pisah, sitasi dan Daftar Pustaka,
+rumusan-tujuan, kata kerja Bloom, jumlah Batasan, abstrak dan kata kunci, rujukan tabel dan gambar.
 Spesifikasi berasal dari references/format-dokumen.md. Skrip memeriksa hal yang terbaca dari XML;
 pemenggalan halaman, baris yatim, dan tampilan gambar tetap diperiksa dari render PDF.
 """
@@ -29,7 +31,13 @@ SPEC = {
 }
 PLACEHOLDER = re.compile(r"<[^<>]{2,40}>|113x+|x{5,}|…{3,}|\.{6,}|Nama Prodi|nama_prodi|Lorem ipsum", re.I)
 PRONOUN = re.compile(r"\b(saya|kami|kita)\b", re.I)
-CAPTION = re.compile(r"^(Tabel|Gambar)\s+\d+(\.\d+)*\.?\s")
+CAPTION = re.compile(r"^(Tabel|Gambar|Algoritma)\s+\d+(\.\d+)*\.?\s")
+CAPNUM = re.compile(r"^((?:Tabel|Gambar|Algoritma)\s+\d+(?:\.\d+)*)[.:]\s")  # caption sungguhan: nomor diikuti titik
+EQNUM = re.compile(r"^\(\d+(\.\d+)?\)$")
+# Kata kerja Bloom revisi pada Tujuan (C4 sampai C5); ubah di sini bila keputusan berubah.
+BLOOM = {"menganalisis", "membedakan", "mengevaluasi", "memeriksa"}
+DASH = re.compile("[–—]")
+CITE = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\]")
 
 
 def wa(el, name):
@@ -131,6 +139,114 @@ def text_of(el):
     return "".join(t.text or "" for t in el.iter(W + "t")).strip()
 
 
+def norm(txt):
+    return re.sub(r"^[\d.\s]+", "", txt).strip().lower()
+
+
+def cite_numbers(txt):
+    out = []
+    for m in CITE.finditer(txt):
+        for part in re.split(r"\s*,\s*", m.group(1)):
+            rng = re.split(r"\s*[–-]\s*", part)
+            out += list(range(int(rng[0]), int(rng[-1]) + 1)) if len(rng) == 2 else [int(rng[0])]
+    return out
+
+
+def cek_isi(body, sty, add):
+    """Aturan isi yang bisa dihitung. Hanya berjalan pada bagian yang ditemukan di dokumen."""
+    tables = {p for t in body.iter(W + "tbl") for p in t.iter(W + "p")}
+    rows = []  # (teks, judul?, butir bernomor?, di tabel?)
+    for p in body.iter(W + "p"):
+        txt = text_of(p)
+        if not txt:
+            continue
+        sid, _, outline, _, _, numbered = para_props(p, sty)
+        sname = (sty.name(sid) or "").lower()
+        if sname.startswith("toc") or sname == "table of figures":
+            continue
+        head = (outline is not None and outline <= 2) or sname.startswith("heading")
+        rows.append((txt, head, numbered and not head, p in tables))
+
+    for txt, _, _, intbl in rows:
+        if DASH.search(txt) and not intbl and not re.match(r"^\[\d+\]", txt):  # entri pustaka: rentang halaman sah
+            add("isi: tanda pisah", f"em/en dash: {txt[:70]!r}")
+
+    start = next((i for i, r in enumerate(rows) if r[1] and norm(r[0]) == "daftar pustaka"), None)
+    if start is not None:
+        entries = {}
+        for r in rows[start + 1:]:
+            m = re.match(r"^\[(\d+)\]", r[0])
+            if m:
+                entries[int(m.group(1))] = r[0]
+        order, cited = [], set()
+        for r in rows[:start]:
+            for n in cite_numbers(r[0]):
+                cited.add(n)
+                if n not in order:
+                    order.append(n)
+        for n in sorted(cited - set(entries)):
+            add("isi: sitasi", f"[{n}] dikutip di teks tetapi tidak ada entri Daftar Pustaka")
+        for n in sorted(set(entries) - cited):
+            add("isi: sitasi", f"entri [{n}] tidak dirujuk di teks")
+        if order != list(range(1, len(order) + 1)):
+            add("isi: sitasi", f"urutan kemunculan pertama bukan 1,2,3,...: {order[:20]}")
+
+    def block(name, stop):
+        i = next((k for k, r in enumerate(rows) if r[1] and norm(r[0]).startswith(name)), None)
+        if i is None:
+            return None
+        out = []
+        for r in rows[i + 1:]:
+            if r[1] and norm(r[0]).startswith(stop):
+                break
+            if r[2]:
+                out.append(r[0])
+        return out
+
+    rum, tuj = block("perumusan masalah", "tujuan"), block("tujuan", "batasan")
+    bat = block("batasan masalah", "rencana kegiatan")
+    if rum is not None and tuj is not None and len(rum) != len(tuj):
+        add("isi: rumusan-tujuan", f"{len(rum)} rumusan dan {len(tuj)} tujuan (harus satu lawan satu)")
+    for k, t in enumerate(tuj or [], 1):
+        w = re.split(r"\W+", t.strip().lower())[0]
+        if w not in BLOOM:
+            add("isi: Bloom", f"Tujuan {k} diawali {w!r}, bukan salah satu dari {sorted(BLOOM)}")
+    if bat is not None and not 3 <= len(bat) <= 6:
+        add("isi: batasan", f"{len(bat)} butir Batasan Masalah (aturan 3 sampai 6)")
+
+    i = next((k for k, r in enumerate(rows) if norm(r[0]) == "abstrak"), None)
+    if i is not None:
+        words, kw = 0, None
+        for txt, head, _, _ in rows[i + 1:]:
+            if re.match(r"^kata kunci", txt, re.I):
+                kw = re.sub(r"^kata kunci\s*[:.]?\s*", "", txt, flags=re.I)
+                break
+            if head:
+                break
+            words += len(txt.split())
+        msg = f"Abstrak: {words} kata"
+        if words > 200:
+            add("isi: abstrak", f"{words} kata (maksimal 200)")
+        if kw is not None:
+            ks = [k.strip() for k in re.split(r"[,;]", kw) if k.strip()]
+            msg += f", {len(ks)} kata kunci"
+            if len(ks) != 5:
+                add("isi: kata kunci", f"{len(ks)} kata kunci (aturan tepat 5): {ks}")
+            for k in ks:
+                if re.search(r"\b[A-Z]{2,}\b", k):
+                    add("isi: kata kunci", f"{k!r}: singkatan (aturan memakai kepanjangan)")
+        print(msg)
+
+    for r in rows:
+        m = CAPNUM.match(r[0])
+        if not m:
+            continue
+        label = m.group(1)
+        pat = re.compile(re.escape(label) + r"(?!\.?\d)")
+        if not any(pat.search(o[0]) for o in rows if not CAPNUM.match(o[0])):
+            add("isi: rujukan", f"{label} tidak dirujuk di teks")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("docx")
@@ -172,7 +288,7 @@ def main():
             continue
         if el.tag == W + "tbl":
             cap = prev_text
-            if not cap.startswith("Tabel"):
+            if not cap.startswith(("Tabel", "Algoritma")):
                 add("caption", f"tabel ke-{idx}: paragraf tepat di atasnya bukan caption 'Tabel ...' ({cap[:50]!r})")
             continue
         if el.tag != W + "p":
@@ -236,10 +352,11 @@ def main():
         body_combo[(tuple(sorted(fonts)), tuple(sorted(sizes)), spacing)] += 1
         if fonts - spec["fonts"] or sizes - {spec["body"], 11.0 if args.jenis == "buku" else spec["body"]}:
             add("isi", f"huruf {sorted(fonts)} {sorted(sizes)} pt: {txt[:60]!r}")
-        if spacing != spec["line"]:
+        if spacing != spec["line"] and not EQNUM.match(txt):
             add("spasi", f"spasi {spacing}, templat {spec['line']}: {txt[:60]!r}")
 
     print(f"Berkas: {args.docx}\nJenis : {args.jenis} (spesifikasi references/format-dokumen.md)\n")
+    cek_isi(body, sty, add)
     print("Kombinasi isi (huruf, ukuran pt, spasi) -> jumlah paragraf:")
     for k, n in body_combo.most_common(6):
         print(f"  {k}: {n}")

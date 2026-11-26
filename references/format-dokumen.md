@@ -151,7 +151,7 @@ Laporkan butir yang relevan ke pengguna saat mengerjakan bagian terkait. Pilihan
 
 ## Pemeriksaan format sebelum selesai
 
-Jalankan `scripts/cek_format.py` (lihat `references/menerapkan-format-docx.md`) lalu render PDF dan lihat halamannya. Format dianggap selesai bila setiap butir di bawah ini terpenuhi atau dilaporkan sebagai pertentangan:
+Jalankan `scripts/bangun_pdf.sh` (lihat `references/menerapkan-format-docx.md`): skrip membangun PDF, menjalankan `cek_format.py`, dan membuat lembar kontak yang dilihat sekali. Format dianggap selesai bila setiap butir di bawah ini terpenuhi atau dilaporkan sebagai pertentangan:
 
 - [ ] Ukuran kertas dan margin setiap bagian halaman sesuai templat.
 - [ ] Huruf dan ukuran isi, heading, caption, abstrak, dan tabel sesuai templat; heading berwarna `auto`, bukan biru.

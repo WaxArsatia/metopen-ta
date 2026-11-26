@@ -51,7 +51,7 @@ Menulis atau merevisi satu bagian membaca berkas isinya ditambah bagian jenis do
 
 1. Baca aturan proyek pengguna bila ada, lalu tentukan jenis dokumen (proposal, buku TA, jurnal TA, slide).
 2. Buka berkas referensi sesuai tabel di atas: berkas isi untuk bagian yang dikerjakan dan bagian jenis dokumen di `format-dokumen.md`.
-3. Tulis atau periksa naskah. Untuk berkas `.docx`, ikuti `menerapkan-format-docx.md` dan jalankan `scripts/cek_format.py`.
+3. Tulis atau periksa naskah. Untuk berkas `.docx`, ikuti `menerapkan-format-docx.md` dan jalankan `scripts/bangun_pdf.sh` (membangun PDF, menjalankan `cek_format.py`, dan membuat lembar kontak).
 4. Laporkan ke pengguna: perubahan atau temuan beserta tag sumbernya, pertentangan yang ditemui beserta pilihan bawaan skill, dan hal yang belum diatur di mana pun.
 
 Pekerjaan selesai bila setiap aturan di berkas yang dibaca sudah diterapkan atau dilaporkan sebagai pertentangan, dan pemeriksaan akhir (`checklist-editing.md` serta "Pemeriksaan format sebelum selesai") sudah dijalankan untuk naskah yang akan diserahkan.
