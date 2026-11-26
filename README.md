@@ -104,7 +104,7 @@ metopen-ta/
 ├── SKILL.md       pintu masuk: urutan otoritas dan tabel "kerjakan X, baca Y"
 ├── SUMBER.md      kode deck (W01 sampai W13) dan templat (TP, TB, TJ) ke berkas, serta cara memeriksa tag
 ├── references/    berkas topik, dimuat sesuai kebutuhan
-├── scripts/       cek_format.py (pemeriksa format dan isi .docx, hanya membaca), bangun_pdf.sh (docx ke PDF, cek, lembar kontak)
+├── scripts/       cek_format.py (pemeriksa format dan isi .docx, hanya membaca), bangun_pdf.sh (docx ke PDF, cek, lembar kontak), docx_peta.py (peta elemen docx), docx_kemas.sh (kemas docx dengan cadangan dan uji zip)
 ├── slides/        salinan slide asli (12 berkas, sekitar 31 MB)
 ├── templates/     salinan templat resmi FIF: Proposal, Buku TA, Jurnal TA
 └── README.md      berkas ini (untuk manusia, tidak dimuat agen)
@@ -145,7 +145,7 @@ scripts/bangun_pdf.sh "Proposal.docx" proposal --preset denis       # ditambah p
 python3 -I scripts/cek_format.py "Proposal.docx" --jenis proposal   # hanya pemeriksa
 ```
 
-`cek_format.py` hanya membaca berkas. Laporannya memuat kertas, margin, huruf, ukuran, spasi, heading, caption, sisa teks templat, kata ganti orang pertama, dan aturan isi yang bisa dihitung (sitasi dan Daftar Pustaka, abstrak dan kata kunci, rujukan tabel dan gambar). Opsi `--preset denis` menambah tanda pisah, rumusan-tujuan, kata kerja Bloom, jumlah Batasan, dan tepat lima kata kunci tanpa singkatan. Pemenggalan halaman dibaca dari daftar baris pertama dan terakhir tiap halaman serta lembar kontak (lihat `references/menerapkan-format-docx.md`).
+`cek_format.py` hanya membaca berkas; daftar pemeriksaannya ada di `python3 -I scripts/cek_format.py -h`. Pemenggalan halaman dibaca dari daftar baris pertama dan terakhir tiap halaman serta lembar kontak (lihat `references/menerapkan-format-docx.md`).
 
 ## Menyimpan keputusan proyek sendiri
 

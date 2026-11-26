@@ -7,8 +7,9 @@ Pemakaian:
 Hanya membaca berkas. Laporan berisi temuan per kelompok; kode keluar 1 bila ada temuan.
 Kelompok "isi: ..." memeriksa aturan isi yang bisa dihitung. Tanpa preset (templat dan slide): sitasi dan
 Daftar Pustaka, panjang abstrak, paling banyak enam kata kunci, rujukan tabel dan gambar.
-Dengan --preset denis (references/aturan-denis.md): ditambah tanda pisah, rumusan-tujuan satu lawan satu,
-kata kerja Bloom, 3 sampai 6 Batasan, dan tepat lima kata kunci tanpa singkatan.
+Dengan --preset denis (references/aturan-denis.md): ditambah tanda pisah, rumusan diawali Bagaimana dan berkalimat tanya,
+rumusan-tujuan satu lawan satu, kata kerja Bloom, 3 sampai 6 Batasan, paragraf kosong antarsubbab, dan
+tepat lima kata kunci tanpa singkatan.
 Spesifikasi berasal dari references/format-dokumen.md. Skrip memeriksa hal yang terbaca dari XML;
 pemenggalan halaman, baris yatim, dan tampilan gambar tetap diperiksa dari render PDF.
 """
@@ -218,6 +219,29 @@ def cek_isi(body, sty, add, preset):
             add("isi: Bloom", f"Tujuan {k} diawali {w!r}, bukan salah satu dari {sorted(BLOOM)}")
     if bat is not None and not 3 <= len(bat) <= 6:
         add("isi: batasan", f"{len(bat)} butir Batasan Masalah (aturan 3 sampai 6)")
+    for k, t in enumerate(rum or [], 1):
+        if not t.rstrip().endswith("?") or not t.lstrip().lower().startswith("bagaimana"):
+            add("isi: rumusan", f"Rumusan {k} tidak diawali 'Bagaimana' dan diakhiri '?': {t[:60]!r}")
+
+    if denis:  # jarak antarsubbab templat: paragraf kosong sesudah judul bab bernomor dan sebelum tiap Heading 2
+        kids = list(body)
+
+        def kosong(el):
+            return (el.tag == W + "p" and not text_of(el)
+                    and not any(x.tag in (W + "drawing", W + "sectPr", W + "pict") for x in el.iter())
+                    and not any(b.get(W + "type") == "page" for b in el.iter(W + "br")))
+
+        for i, el in enumerate(kids):
+            if el.tag != W + "p" or not text_of(el):
+                continue
+            sid, _, outline, _, _, numbered = para_props(el, sty)
+            sname = (sty.name(sid) or "").lower()
+            if sname == "heading 2" or (outline == 1 and sname.startswith("heading")):
+                if i == 0 or not kosong(kids[i - 1]):
+                    add("isi: jarak subbab", f"tidak ada paragraf kosong sebelum subbab {text_of(el)[:40]!r}")
+            elif numbered and (sname == "heading 1" or outline == 0):
+                if i + 1 >= len(kids) or not kosong(kids[i + 1]):
+                    add("isi: jarak subbab", f"tidak ada paragraf kosong sesudah judul bab {text_of(el)[:40]!r}")
 
     i = next((k for k, r in enumerate(rows) if norm(r[0]) == "abstrak"), None)
     if i is not None:
