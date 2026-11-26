@@ -2,13 +2,25 @@
 # Bangun PDF dari .docx lalu periksa: huruf pengganti, cek_format.py, baris awal dan akhir tiap halaman,
 # dan lembar kontak halaman (6 halaman per gambar) untuk dilihat sekali, bukan halaman demi halaman.
 #
-# Pemakaian: scripts/bangun_pdf.sh BERKAS.docx [proposal|buku|jurnal] [FOLDER_KERJA]
+# Pemakaian: scripts/bangun_pdf.sh BERKAS.docx [proposal|buku|jurnal] [FOLDER_KERJA] [--preset denis]
+#   --preset diteruskan ke cek_format.py.
 #   PDF ditulis di folder yang sama dengan BERKAS.docx (nama sama, ekstensi .pdf).
 #   FOLDER_KERJA menampung lembar kontak (bawaan: folder sementara baru).
 # Kode keluar 0 bila PDF terbangun; temuan cek_format.py dan huruf pengganti hanya dilaporkan.
 set -euo pipefail
 
-[[ $# -ge 1 ]] || { sed -n '2,8p' "$0"; exit 2; }
+opsi=()
+arg=()
+while [[ $# -gt 0 ]]; do
+  if [[ $1 == --preset ]]; then
+    [[ $# -ge 2 ]] || { echo "--preset butuh nama preset"; exit 2; }
+    opsi=(--preset "$2"); shift 2
+  else
+    arg+=("$1"); shift
+  fi
+done
+set -- "${arg[@]}"
+[[ $# -ge 1 ]] || { sed -n '2,10p' "$0"; exit 2; }
 docx=$(realpath "$1")
 jenis=${2:-proposal}
 work=${3:-$(mktemp -d)}
@@ -28,9 +40,12 @@ pdffonts "$pdf" | awk 'NR>2{sub(/^[A-Z]+\+/, "", $1); print "  " $1}' | sort -u
 for f in "Times New Roman" "Carlito"; do
   [[ $(fc-list | grep -ci "$f" || true) -gt 0 ]] || echo "  PERINGATAN: huruf $f tidak terpasang, pemenggalan halaman bisa beda dari Word"
 done
+if [[ $(unzip -p "$docx" word/document.xml | grep -c "Cambria Math" || true) -gt 0 && $(fc-list | grep -ci "Cambria Math" || true) -eq 0 ]]; then
+  echo "  PERINGATAN: docx memakai Cambria Math (persamaan) tetapi huruf itu tidak terpasang; periksa persamaan di Word"
+fi
 
 echo; echo "== cek_format.py ($jenis)"
-python3 -I "$here/cek_format.py" "$docx" --jenis "$jenis" || echo "(ada temuan: nilai dengan konteksnya)"
+python3 -I "$here/cek_format.py" "$docx" --jenis "$jenis" ${opsi[@]+"${opsi[@]}"} || echo "(ada temuan: nilai dengan konteksnya)"
 
 echo; echo "== Baris pertama dan terakhir tiap halaman (cari judul atau pengantar daftar yang tertinggal di dasar)"
 for ((i = 1; i <= pages; i++)); do

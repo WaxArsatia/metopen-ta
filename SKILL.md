@@ -1,9 +1,9 @@
 ---
 name: metopen-ta
-description: "Aturan Metopen dan templat resmi FIF Telkom University untuk Tugas Akhir (TA, skripsi), bertag sumber. Pakai juga saat pengguna menulis \"ikuti aturan denis\". Pakai setiap kali menulis, merevisi, memformat, atau memeriksa proposal TA, buku TA, jurnal TA, atau slide sidang, juga saat pengguna hanya menyebut bab, bagian, atau berkas .docx TA tanpa menyebut Metopen atau templat: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
+description: "Aturan Metopen dan templat resmi FIF Telkom University untuk Tugas Akhir (TA, skripsi), bertag sumber. Pakai juga saat pengguna menulis \"ikuti aturan denis\". Pakai setiap kali menulis, merevisi, memformat, atau memeriksa proposal TA, buku TA, jurnal TA, atau slide sidang, atau menjawab soal syarat sidang, publikasi, kemiripan, dan pemakaian AI untuk TA, juga saat pengguna hanya menyebut bab, bagian, atau berkas .docx TA tanpa menyebut Metopen atau templat: format dan tata letak (margin, huruf, ukuran, spasi, heading, caption, nomor halaman), struktur bab, judul, abstrak, Pendahuluan (Latar Belakang, Perumusan Masalah, Tujuan, Batasan), Studi Terkait, evaluasi dan metrik, sitasi dan parafrase, penyuntingan akhir."
 ---
 
-Pengetahuan metopen dan templat FIF, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber: `[W06 s15]` untuk slide (deck W06, slide 15), `[TP hlm. 6]`, `[TB hlm. 25]`, `[TJ hlm. 4]` untuk templat Proposal, Buku TA, dan Jurnal TA (halaman PDF hasil render), dan `[TB xml]` untuk fakta dari pengaturan di dalam docx. Peta tag ke berkas dan cara memeriksanya ada di `SUMBER.md`.
+Pengetahuan metopen dan templat FIF, dipecah per topik di `references/`. Setiap aturan berakhir dengan tag sumber: `[W06 s15]` untuk slide (deck W06, slide 15), `[TP hlm. 6]`, `[TB hlm. 25]`, `[TJ hlm. 4]` untuk templat Proposal, Buku TA, dan Jurnal TA (halaman PDF hasil render), dan `[TB xml]` untuk fakta dari pengaturan di dalam docx. Dokumen resmi memakai `[PFIF20]`, `[PU027]`, `[PU026]`, `[KWR175]`, `[AI25]`, dan `[SONIA]`. Peta tag ke berkas dan cara memeriksanya ada di `SUMBER.md`.
 
 ## Urutan otoritas
 
@@ -13,6 +13,8 @@ Saat dua sumber bertentangan, yang lebih atas menang:
 2. Templat resmi fakultas di `templates/` (aturan di `references/format-dokumen.md`). Di dalam templat Proposal dan Buku TA, pengaturan docx menang atas teks petunjuk; di templat Jurnal TA, teks petunjuk yang menang.
 3. Slide kuliah.
 4. Pola TA terbit (`references/pola-ta-terbit.md`): praktik teramati sebagai contoh, bukan aturan.
+
+Aturan resmi (`references/aturan-resmi.md`) berperingkat menurut jenis butir: untuk integritas akademik, pemakaian AI, publikasi, dan syarat sidang atau kelulusan, aturan resmi berada di atas templat dan slide; untuk format dan struktur, templat tetap menang. Aturan proyek atau preset yang menyimpang dari butir integritas, AI, publikasi, atau kelulusan tetap keputusan pengguna dan dilaporkan beserta risikonya.
 
 Dengan pemicu "ikuti aturan denis" (bagian berikut), satu penyesuaian berlaku: pada butir yang diatur preset dan berbeda dari praktik TA terbit bimbingan calon pembimbing, praktik TA terbit berada di atas preset (keputusan pengguna 2026-11-16). Butir lain tetap mengikuti urutan di atas. Tanpa pemicu, urutan di atas berlaku apa adanya.
 
@@ -25,7 +27,8 @@ Pengguna yang menulis "ikuti aturan denis" meminta preset keputusan proyek di `r
 1. Baca `references/aturan-denis.md` penuh dan bagian "Pola TA satu pembimbing" di `references/pola-ta-terbit.md`, lalu terapkan isinya selama sesi. Bila menerapkan pola itu membalik keputusan yang tercatat di preset, daftar butirnya dilaporkan ke pengguna sebelum mengubah apa pun.
 2. Kolom `[ISI: ...]` kosong yang dibutuhkan tugas saat ini ditanyakan ke pengguna sekaligus, sebelum menulis. Kolom bertulisan "bawaan" memakai nilai bawaan bila pengguna tidak menjawab. Bagian "Keputusan format dan laporan" dikonfirmasi satu kali di awal sesi.
 3. Setelah kolom terisi, tawarkan menyimpannya ke berkas instruksi proyek yang dibaca agen ini (AGENTS.md, CLAUDE.md, atau sejenisnya), supaya pemicu tidak perlu diulang.
-4. Daftar "Siap diserahkan" di akhir preset ditambahkan pada pemeriksaan akhir skill (`checklist-editing.md` dan "Pemeriksaan format sebelum selesai"). Keduanya dijalankan saat naskah dinyatakan selesai.
+4. Pemeriksa dijalankan dengan `--preset denis`. Tanpa pemicu atau aturan proyek yang memakai preset, opsi itu tidak dipakai.
+5. Daftar "Siap diserahkan" di akhir preset ditambahkan pada pemeriksaan akhir skill (`checklist-editing.md` dan "Pemeriksaan format sebelum selesai"). Keduanya dijalankan saat naskah dinyatakan selesai.
 
 ## Penunjuk: kerjakan X, baca Y
 
@@ -44,6 +47,7 @@ Baca hanya berkas yang cabangnya sedang dikerjakan.
 | Contoh nyata dari TA FIF yang sudah terbit | `references/pola-ta-terbit.md` |
 | Menyunting naskah, pemeriksaan akhir sebelum selesai | `references/checklist-editing.md` |
 | Slide atau persiapan sidang | `references/presentasi-sidang.md` |
+| Syarat sidang dan revisi, bimbingan, jalur publikasi, kemiripan dan plagiarisme, pemakaian AI | `references/aturan-resmi.md` |
 
 Menulis atau merevisi satu bagian membaca berkas isinya ditambah bagian jenis dokumen yang sesuai di `format-dokumen.md`, karena templat juga mengatur isi tiap bab. Pemeriksaan akhir selalu menyertakan `checklist-editing.md` dan daftar "Pemeriksaan format sebelum selesai" di `format-dokumen.md`.
 

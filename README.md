@@ -94,7 +94,7 @@ Sidang dan penyelesaian:
 ### Yang tidak dilakukan
 
 - Tidak menjalankan pemeriksaan kemiripan (plagiarisme) kampus. Agen hanya mengingatkan.
-- Tidak mengecek indeks atau kuartil jurnal.
+- Skripnya tidak mengecek indeks atau kuartil jurnal; pemeriksaan itu hanya dilakukan agen lewat web bila diminta aturan proyek atau preset.
 - Tidak menetapkan keputusan proyek Anda. Konflik antara slide dan templat atau aturan proyek dilaporkan, bukan dipilih sendiri.
 
 ## Isi repo
@@ -122,6 +122,7 @@ metopen-ta/
 | `evaluasi.md` | Rencana dan hasil pengujian, metrik, analisis |
 | `sitasi-parafrase.md` | Sitasi IEEE dan APA, jenis publikasi, parafrase |
 | `checklist-editing.md` | Penyuntingan dan pemeriksaan akhir |
+| `aturan-resmi.md` | Syarat sidang, publikasi, integritas akademik, dan AI dari dokumen resmi FIF dan Telkom University |
 | `presentasi-sidang.md` | Slide dan persiapan sidang |
 | `aturan-denis.md` | Preset aturan generik dan keputusan proyek TA (opsional), dipicu dengan "ikuti aturan denis" |
 
@@ -134,16 +135,17 @@ Skill memakai pemuatan bertahap (*progressive disclosure*) sesuai [spesifikasi A
 3. Agen membuka satu atau dua berkas `references/` sesuai bagian yang dikerjakan.
 4. `slides/` hanya dibuka saat sebuah tag perlu diperiksa. Cara memeriksanya ada di `SUMBER.md`.
 
-Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi fakultas, lalu slide kuliah, lalu pola TA terbit. Pemicu "ikuti aturan denis" menambah satu penyesuaian: pada butir yang diatur preset dan berbeda dari praktik TA terbit, praktik TA terbit menang atas preset. Di dalam templat Proposal dan Buku TA, pengaturan yang tertanam di docx menang atas kalimat petunjuknya (contoh: teks menyebut "1 spasi", paragraf diatur 1,5). Templat Jurnal TA dikecualikan karena docx-nya sisa konversi PDF; di sana teks petunjuk yang menang.
+Urutan otoritas saat aturan bertentangan: aturan proyek Anda, lalu templat resmi fakultas, lalu slide kuliah, lalu pola TA terbit. Untuk integritas akademik, AI, publikasi, dan syarat sidang, aturan resmi di `aturan-resmi.md` berada di atas templat dan slide. Pemicu "ikuti aturan denis" menambah satu penyesuaian: pada butir yang diatur preset dan berbeda dari praktik TA terbit, praktik TA terbit menang atas preset. Di dalam templat Proposal dan Buku TA, pengaturan yang tertanam di docx menang atas kalimat petunjuknya (contoh: teks menyebut "1 spasi", paragraf diatur 1,5). Templat Jurnal TA dikecualikan karena docx-nya sisa konversi PDF; di sana teks petunjuk yang menang.
 
 ## Pemeriksa format
 
 ```bash
 scripts/bangun_pdf.sh "Proposal.docx" proposal                      # PDF, cek, lembar kontak; jenis: proposal, buku, jurnal
+scripts/bangun_pdf.sh "Proposal.docx" proposal --preset denis       # ditambah pemeriksaan preset
 python3 -I scripts/cek_format.py "Proposal.docx" --jenis proposal   # hanya pemeriksa
 ```
 
-`cek_format.py` hanya membaca berkas. Laporannya memuat kertas, margin, huruf, ukuran, spasi, heading, caption, sisa teks templat, kata ganti orang pertama, dan aturan isi yang bisa dihitung (tanda pisah, sitasi dan Daftar Pustaka, rumusan-tujuan, kata kerja Bloom, jumlah Batasan, abstrak dan kata kunci, rujukan tabel dan gambar). Pemenggalan halaman dibaca dari daftar baris pertama dan terakhir tiap halaman serta lembar kontak (lihat `references/menerapkan-format-docx.md`).
+`cek_format.py` hanya membaca berkas. Laporannya memuat kertas, margin, huruf, ukuran, spasi, heading, caption, sisa teks templat, kata ganti orang pertama, dan aturan isi yang bisa dihitung (sitasi dan Daftar Pustaka, abstrak dan kata kunci, rujukan tabel dan gambar). Opsi `--preset denis` menambah tanda pisah, rumusan-tujuan, kata kerja Bloom, jumlah Batasan, dan tepat lima kata kunci tanpa singkatan. Pemenggalan halaman dibaca dari daftar baris pertama dan terakhir tiap halaman serta lembar kontak (lihat `references/menerapkan-format-docx.md`).
 
 ## Menyimpan keputusan proyek sendiri
 
@@ -189,6 +191,7 @@ Preset bersifat pilihan. Aturan proyek tertulis milik Anda menang atas preset, d
 
 - Templat di `templates/` adalah salinan yang diperoleh penyusun dari program studi pada 2024-2025, bukan unduhan dari situs resmi. Portal resmi fakultas (SONIA) memuat templat gaya jurnal TA; versi docx proposal dan buku TA ini tidak ditemukan di situs publik. Struktur templat buku sejalan dengan TA S1 FIF yang terbit 2025-2026. Hak cipta templat tetap pada Fakultas Informatika Universitas Telkom.
 - Slide di `slides/` milik pengampu kelas dan Universitas Telkom. Penyusun repo memperoleh izin untuk membagikannya agar tag sumber bisa diperiksa tanpa berkas terpisah. Izin itu tidak mengalihkan hak cipta slide kepada penyusun repo atau pemakai repo.
-- Isi `references/` adalah ringkasan parafrase dari slide tersebut. Contoh judul, kutipan referensi, dan nama penulis di dalamnya berasal dari contoh di slide.
+- Dokumen resmi yang dirujuk `aturan-resmi.md` tidak disalin ke repo; hanya ringkasan dan alamatnya.
+- Isi `references/` adalah ringkasan parafrase dari slide, templat, dan dokumen tersebut. Contoh judul, kutipan referensi, dan nama penulis di dalamnya berasal dari contoh di slide.
 - Repo ini bukan materi resmi universitas dan tidak mewakili pandangan universitas.
 - Repo belum memakai lisensi terbuka, jadi hak cipta atas konten buatan penyusun tetap pada penyusun. Bila lisensi ditambahkan nanti, lisensi itu harus mengecualikan `slides/` dan `templates/`.

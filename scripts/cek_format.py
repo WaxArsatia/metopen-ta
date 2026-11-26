@@ -2,11 +2,13 @@
 """Periksa format .docx proposal, buku TA, atau jurnal TA FIF terhadap spesifikasi templat.
 
 Pemakaian:
-    python3 -I scripts/cek_format.py BERKAS.docx --jenis proposal|buku|jurnal
+    python3 -I scripts/cek_format.py BERKAS.docx --jenis proposal|buku|jurnal [--preset denis]
 
 Hanya membaca berkas. Laporan berisi temuan per kelompok; kode keluar 1 bila ada temuan.
-Kelompok "isi: ..." memeriksa aturan isi yang bisa dihitung: tanda pisah, sitasi dan Daftar Pustaka,
-rumusan-tujuan, kata kerja Bloom, jumlah Batasan, abstrak dan kata kunci, rujukan tabel dan gambar.
+Kelompok "isi: ..." memeriksa aturan isi yang bisa dihitung. Tanpa preset (templat dan slide): sitasi dan
+Daftar Pustaka, panjang abstrak, paling banyak enam kata kunci, rujukan tabel dan gambar.
+Dengan --preset denis (references/aturan-denis.md): ditambah tanda pisah, rumusan-tujuan satu lawan satu,
+kata kerja Bloom, 3 sampai 6 Batasan, dan tepat lima kata kunci tanpa singkatan.
 Spesifikasi berasal dari references/format-dokumen.md. Skrip memeriksa hal yang terbaca dari XML;
 pemenggalan halaman, baris yatim, dan tampilan gambar tetap diperiksa dari render PDF.
 """
@@ -34,7 +36,7 @@ PRONOUN = re.compile(r"\b(saya|kami|kita)\b", re.I)
 CAPTION = re.compile(r"^(Tabel|Gambar|Algoritma)\s+\d+(\.\d+)*\.?\s")
 CAPNUM = re.compile(r"^((?:Tabel|Gambar|Algoritma)\s+\d+(?:\.\d+)*)[.:]\s")  # caption sungguhan: nomor diikuti titik
 EQNUM = re.compile(r"^\(\d+(\.\d+)?\)$")
-# Kata kerja Bloom revisi pada Tujuan (C4 sampai C5); ubah di sini bila keputusan berubah.
+# --preset denis: kata kerja Bloom revisi pada Tujuan (C4 sampai C5); ubah di sini bila keputusan berubah.
 BLOOM = {"menganalisis", "membedakan", "mengevaluasi", "memeriksa"}
 DASH = re.compile("[–—]")
 CITE = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\]")
@@ -152,7 +154,7 @@ def cite_numbers(txt):
     return out
 
 
-def cek_isi(body, sty, add):
+def cek_isi(body, sty, add, preset):
     """Aturan isi yang bisa dihitung. Hanya berjalan pada bagian yang ditemukan di dokumen."""
     tables = {p for t in body.iter(W + "tbl") for p in t.iter(W + "p")}
     rows = []  # (teks, judul?, butir bernomor?, di tabel?)
@@ -167,7 +169,8 @@ def cek_isi(body, sty, add):
         head = (outline is not None and outline <= 2) or sname.startswith("heading")
         rows.append((txt, head, numbered and not head, p in tables))
 
-    for txt, _, _, intbl in rows:
+    denis = preset == "denis"
+    for txt, _, _, intbl in rows if denis else []:
         if DASH.search(txt) and not intbl and not re.match(r"^\[\d+\]", txt):  # entri pustaka: rentang halaman sah
             add("isi: tanda pisah", f"em/en dash: {txt[:70]!r}")
 
@@ -203,8 +206,10 @@ def cek_isi(body, sty, add):
                 out.append(r[0])
         return out
 
-    rum, tuj = block("perumusan masalah", "tujuan"), block("tujuan", "batasan")
-    bat = block("batasan masalah", "rencana kegiatan")
+    rum, tuj, bat = None, None, None
+    if denis:
+        rum, tuj = block("perumusan masalah", "tujuan"), block("tujuan", "batasan")
+        bat = block("batasan masalah", "rencana kegiatan")
     if rum is not None and tuj is not None and len(rum) != len(tuj):
         add("isi: rumusan-tujuan", f"{len(rum)} rumusan dan {len(tuj)} tujuan (harus satu lawan satu)")
     for k, t in enumerate(tuj or [], 1):
@@ -230,11 +235,13 @@ def cek_isi(body, sty, add):
         if kw is not None:
             ks = [k.strip() for k in re.split(r"[,;]", kw) if k.strip()]
             msg += f", {len(ks)} kata kunci"
-            if len(ks) != 5:
-                add("isi: kata kunci", f"{len(ks)} kata kunci (aturan tepat 5): {ks}")
-            for k in ks:
+            if denis and len(ks) != 5:
+                add("isi: kata kunci", f"{len(ks)} kata kunci (preset: tepat 5): {ks}")
+            if not denis and len(ks) > 6:
+                add("isi: kata kunci", f"{len(ks)} kata kunci (maksimal 6): {ks}")
+            for k in ks if denis else []:
                 if re.search(r"\b[A-Z]{2,}\b", k):
-                    add("isi: kata kunci", f"{k!r}: singkatan (aturan memakai kepanjangan)")
+                    add("isi: kata kunci", f"{k!r}: singkatan (preset: pakai kepanjangan)")
         print(msg)
 
     for r in rows:
@@ -251,6 +258,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("docx")
     ap.add_argument("--jenis", required=True, choices=SPEC)
+    ap.add_argument("--preset", choices=["denis"], help="tambahkan pemeriksaan preset aturan Denis")
     ap.add_argument("--maks", type=int, default=8, help="contoh temuan per kelompok (bawaan 8)")
     args = ap.parse_args()
     spec = SPEC[args.jenis]
@@ -355,8 +363,8 @@ def main():
         if spacing != spec["line"] and not EQNUM.match(txt):
             add("spasi", f"spasi {spacing}, templat {spec['line']}: {txt[:60]!r}")
 
-    print(f"Berkas: {args.docx}\nJenis : {args.jenis} (spesifikasi references/format-dokumen.md)\n")
-    cek_isi(body, sty, add)
+    print(f"Berkas: {args.docx}\nJenis : {args.jenis} (spesifikasi references/format-dokumen.md)\nPreset: {args.preset or 'tidak dipakai'}\n")
+    cek_isi(body, sty, add, args.preset)
     print("Kombinasi isi (huruf, ukuran pt, spasi) -> jumlah paragraf:")
     for k, n in body_combo.most_common(6):
         print(f"  {k}: {n}")

@@ -28,6 +28,7 @@ Templat kadang memuat dua versi aturan: kalimat petunjuk di halaman, dan pengatu
 - Judul tanpa nomor yang memakai Heading 1 yang sama: Lembar Persetujuan, ABSTRAK, DAFTAR PUSTAKA, LAMPIRAN. [TP xml]
 - Subbab (Heading 2): bernomor "1.1.", TNR 14 pt tebal, warna `auto`, indentasi kiri 1,27 cm gantung 1,27 cm. [TP xml; TP hlm. 6]
 - Sub-subbab dan seterusnya: 12 pt. [TP hlm. 6] Templat tidak memberi contoh, jadi ikuti pola Heading 2 dengan ukuran 12 pt tebal.
+- Templat memberi satu paragraf kosong sesudah judul ABSTRAK, judul bab bernomor, dan LAMPIRAN, serta sebelum setiap subbab (Heading 2); sesudah "Lembar Persetujuan" ada dua, dan sesudah DAFTAR PUSTAKA tidak ada. [TP xml]
 - Gaya Heading 1-3 bawaan templat berhuruf Calibri Light berwarna biru. Tampilan TNR hitam berasal dari format langsung pada run. Heading baru menyalin run heading templat, bukan hanya memasang gaya. [TP xml]
 
 ### Halaman awal dan penomoran
@@ -145,13 +146,13 @@ Laporkan butir yang relevan ke pengguna saat mengerjakan bagian terkait. Pilihan
 | 8 | [TB] teks: nomenklatur tabel tebal + dua spasi [TB hlm. 27]; templat: "Tabel 1.1." + satu spasi, seluruh caption tebal [TB xml] | Format templat |
 | 9 | [TB] aturan catatan kaki (ibid, op. cit., loc. cit.) [TB hlm. 30-39] berdampingan dengan sitasi IEEE bernomor [TB hlm. 28-29] | Sitasi IEEE; catatan kaki hanya untuk keterangan tambahan |
 | 10 | [TJ] Daftar Pustaka: unsur "nama akhir, nama awal. tahun. judul. tempat. penerbit." dan urutan boleh menurut abjad [TJ hlm. 7, 9]; [TB] dan slide: IEEE urut kemunculan | Tanyakan ke pembimbing atau pengguna; bawaan IEEE |
-| 11 | Lembar Orisinalitas [TB hlm. 5; TJ hlm. 3] menyatakan produk TA bukan hasil *Generative AI*; slide Tips membolehkan bantuan gen-AI asal dibaca ulang [Tips s9] | Templat menang. Ingatkan pengguna bahwa pernyataan yang ditandatangani itu mengikat, dan sarankan memeriksa kebijakan AI prodi atau pembimbing |
+| 11 | Lembar Orisinalitas [TB hlm. 5; TJ hlm. 3] menyatakan produk TA bukan hasil *Generative AI*; slide Tips membolehkan bantuan gen-AI asal dibaca ulang [Tips s9] | Templat menang atas slide; hubungannya dengan aturan resmi AI ada di `aturan-resmi.md` (Pertentangan No. 4). Ingatkan pengguna bahwa pernyataan yang ditandatangani itu mengikat, dan sarankan memeriksa kebijakan AI prodi atau pembimbing |
 | 12 | [TB] huruf "TNR/Calibri/Aptos" [TB hlm. 25]; [TP] hanya TNR [TP hlm. 6] | Proposal TNR; buku TA satu huruf konsisten (TNR bila proposal TNR) |
 | 13 | [TB] referensi minimal 5 ber-ISSN/ISBN [TB hlm. 30]; [TP] minimal 10 dengan 3 terindeks [TP hlm. 9] | Proposal ikut [TP]; laporan memenuhi keduanya |
 
 ## Pemeriksaan format sebelum selesai
 
-Jalankan `scripts/bangun_pdf.sh` (lihat `references/menerapkan-format-docx.md`): skrip membangun PDF, menjalankan `cek_format.py`, dan membuat lembar kontak yang dilihat sekali. Format dianggap selesai bila setiap butir di bawah ini terpenuhi atau dilaporkan sebagai pertentangan:
+Jalankan `scripts/bangun_pdf.sh`, dengan `--preset denis` bila preset aktif (lihat `references/menerapkan-format-docx.md`): skrip membangun PDF, menjalankan `cek_format.py`, dan membuat lembar kontak yang dilihat sekali. Format dianggap selesai bila setiap butir di bawah ini terpenuhi atau dilaporkan sebagai pertentangan:
 
 - [ ] Ukuran kertas dan margin setiap bagian halaman sesuai templat.
 - [ ] Huruf dan ukuran isi, heading, caption, abstrak, dan tabel sesuai templat; heading berwarna `auto`, bukan biru.
