@@ -48,6 +48,7 @@ Angka dan cara pengaturannya ada di `format-dokumen.md` dan `menerapkan-format-d
 - Pemenggalan halaman rapi: tidak ada judul atau kalimat pengantar daftar sendirian di dasar halaman, dan tidak ada baris yatim atau janda.
 - Heading baru menyalin run heading templat, bukan membuat run baru.
 - Jarak antarsubbab Bab 1 sampai 3 mengikuti templat proposal: satu paragraf kosong sesudah setiap judul bab bernomor dan sebelum setiap subbab (Heading 2), dipertahankan saat isi bab diganti.
+- Pembuka bab di proposal: Bab 1 dan Bab 3 langsung ke subbab pertama tanpa paragraf pengantar. Bab 2 diawali satu paragraf pendek yang menyebut permasalahan yang dikaji dan ringkasan hasil kajiannya [TP hlm. 6].
 - Nomor halaman memakai huruf yang sama dengan isi. Di proposal, gaya Footer diberi Times New Roman 12 pt; templat memakai huruf bawaan dokumen (Calibri) [TP xml]. Caption tetap memakai ukuran captionnya.
 
 ## Bab 1
